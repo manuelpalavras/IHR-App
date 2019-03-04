@@ -18,14 +18,13 @@ app.use(express.static(path.join(__dirname, 'public')));
  *  Routers
  */
 
-
-const mainRouter = require('./routes/mainRouter');
 const citiesRouter = require('./routes/citiesRouter');
 const routesRouter = require('./routes/routesRouter');
+const userRouter = require ('./routes/userRouter');
 
 app.use('/',citiesRouter);
 app.use('/',routesRouter);
-app.use('/', mainRouter);
+app.use('/user',userRouter);
 
 app.listen(port, () => console.log('server working'));
 
