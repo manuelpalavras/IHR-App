@@ -1,0 +1,10 @@
+{ 
+    "_id" : ObjectId("5c122361ea8b0022dde3ce80"), 
+    "Nome" : "Lisboa", 
+    "Imagem" : "lisboa.jpg"
+}
+{ 
+    "_id" : ObjectId("5c1223c2ea8b0022dde3ce95"), 
+    "Nome" : "Porto", 
+    "Imagem" : "porto.jpg"
+}

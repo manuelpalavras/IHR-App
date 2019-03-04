@@ -1,0 +1,96 @@
+{ 
+    "_id" : ObjectId("5c7d4dd8f34a80e3573b197a"), 
+    "Nome" : "Tiago Ferreira", 
+    "Email" : "tiagoferreira97@gmail.com", 
+    "Nacionalidade" : "Portuguesa", 
+    "Data de Nascimento" : "28-01-1997", 
+    "Favoritos" : [
+        {
+            "Rotas" : [
+                {
+                    "ID" : "5beed8f539fc861a883b74a2"
+                }
+            ]
+        }
+    ], 
+    "Guia" : true, 
+    "Disponibilidade" : [
+        {
+            "Data" : "10-03-2019", 
+            "Cidade" : "Lisboa"
+        }
+    ], 
+    "Marcações" : [
+        {
+            "Data" : "15-03-2019", 
+            "Local" : "Praça do comercio", 
+            "IdUser" : "123", 
+            "Estado" : "Pendente"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5c7d5328f34a80e3573b1a51"), 
+    "Nome" : "Manuel Palavras", 
+    "Email" : "manuelpalavras19@gmail.com", 
+    "Nacionalidade" : "Portuguesa", 
+    "Data de Nascimento" : "19-05-1996", 
+    "Favoritos" : [
+        {
+            "Rotas" : [
+                {
+                    "ID" : "5beed8f539fc861a883b74a2"
+                }
+            ]
+        }
+    ], 
+    "Guia" : false
+}
+{ 
+    "_id" : ObjectId("5c7d5436f34a80e3573b1a83"), 
+    "Nome" : "Bruno Flores", 
+    "Email" : "brunorosa@gmail.com", 
+    "Nacionalidade" : "Portuguesa", 
+    "Data de Nascimento" : "14-06-1997", 
+    "Favoritos" : [
+        {
+            "Rotas" : [
+                {
+                    "ID" : "5beed8f539fc861a883b74a2"
+                }
+            ]
+        }
+    ], 
+    "Guia" : true, 
+    "Disponibilidade" : [
+        {
+            "Data" : "6-04-2019", 
+            "Cidade" : "Lisboa"
+        }
+    ], 
+    "Marcações" : [
+        {
+            "Data" : "19-04-2019", 
+            "Rota" : "Baixa Pombalina", 
+            "IdUser" : "123", 
+            "Estado" : "Confirmado"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5c7d5523f34a80e3573b1ac3"), 
+    "Nome" : "Andre Oliveira", 
+    "Email" : "andreoliveira@gmail.com", 
+    "Nacionalidade" : "Portuguesa", 
+    "Data de Nascimento" : "12-04-1994", 
+    "Favoritos" : [
+        {
+            "Rotas" : [
+                {
+                    "ID" : "5beed8f539fc861a883b74a2"
+                }
+            ]
+        }
+    ], 
+    "Guia" : false
+}

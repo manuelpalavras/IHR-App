@@ -1,0 +1,339 @@
+{ 
+    "_id" : ObjectId("5beed8f539fc861a883b74a2"), 
+    "Nome" : "Assalto ao Castelo!", 
+    "Descricao" : "O Castelo de São Jorge ou Paço da Alcáçova ou Paço de São Jorge localiza-se na freguesia de Santa Maria Maior, na cidade e concelho de Lisboa, em Portugal. O nome actual deriva da devoção do castelo a São Jorge, santo padroeiro dos cavaleiros e das cruzadas, feita por ordem de D. João I no século XIV.", 
+    "PoI" : [
+        {
+            "Nome" : "Rossio", 
+            "Descricao" : "É uma praça grande", 
+            "Img" : "rossio.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.713823, 
+                    -9.13939
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Martim Moniz", 
+            "Descricao" : "Viva o indiano", 
+            "Img" : "martimmoniz.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.715935, 
+                    -9.136358
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Castelo de São Jorge", 
+            "Descricao" : "O Topo de lisboa", 
+            "Img" : "castelodesaojorge.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.712629, 
+                    -9.132962
+                ]
+            }
+        }
+    ], 
+    "Tipo" : [
+        "Historica"
+    ], 
+    "imagem" : "castelodesaojorge.jpg", 
+    "Classificacao" : 4.7, 
+    "Avaliacoes" : "439", 
+    "Dificuldade" : "Media", 
+    "Duracao" : "2:00", 
+    "Deficientes" : false, 
+    "Pais" : "Portugal", 
+    "Cidade" : "Lisboa"
+}
+{ 
+    "_id" : ObjectId("5bf6d59f75425b32f80295a2"), 
+    "Nome" : "Conhecer Belem!", 
+    "Descricao" : "Belém está ligada aos Descobrimentos, desde que D. Manuel I subiu ao trono em 1495.Hoje, Belém contém vários espaços verdejantes com museus, parques e jardins, possuindo um atraente ambiente ribeirinho com cafés e um passeio público. É uma das zonas mais turísticas de Portugal.", 
+    "PoI" : [
+        {
+            "Nome" : "Museu do Combatente", 
+            "Descricao" : "O Museu do Combatente, no Forte do Bom Sucesso, ressalta conquistas militares portuguesas. Três períodos são destacados: I Guerra Mundial, Campanhas do Ultramar e Missões de Paz. O que mais chama a atenção é o Monumento aos Combatentes do Ultramar. Aberto todos os dias. 10:00 às 17:00, de outubro a março. 10:00 às 18:00, de abril a setembro.", 
+            "Img" : "museucombatente.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.693186, 
+                    -9.218392
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Torre de Belém", 
+            "Descricao" : "A poucos passos do Museu do Combatente, encontramos um dos pontos mais simbólicos de Lisboa (e de Portugal): a Torre de Belém, construída no início do século 16. Muitos turistas cometem o pecado de visitar a torre apenas por fora. Entrar nela é uma experiência INCRÍVEL! 10:00 às 17:30 (última entrada às 17:00), de outubro a abril. 10:00 às 18:30 (última entrada às 18:00), de maio a setembro. Fechado às segundas-feiras e nos dias 1º de janeiro, Domingo de Páscoa, 1º de maio e 25 de dezembro.", 
+            "Img" : "torrebelem.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.69186, 
+                    -9.216149
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Passeio Junto ao Rio Tejo", 
+            "Descricao" : "Ora, o próprio Tejo, um dos rios mais famosos do mundo, é uma atração turística. E está ali, enorme, majestoso, para você apreciar. Aproveite para respirar fundo, relaxar, sentir todas as vibrações. E tire muitas fotos. Elas saem lindas!", 
+            "Img" : "riotejo.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.692932, 
+                    -9.209197
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Padrão dos Descobrimentos", 
+            "Descricao" : "À beira do Tejo, o Padrão dos Descobrimentos comemora a expansão ultramarina portuguesa. Expressa um passado glorioso, com a grandeza da obra do Infante D. Henrique, o impulsionador das descobertas. Viva a emoção de subir no monumento. A 56 metros de altura, tem-se uma vista maravilhosa da região. No inverno, período em que escurece mais cedo, uma boa idéia é subir quando o pôr-do-sol está próximo.", 
+            "Img" : "padraodescobrimentos.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.693719, 
+                    -9.205978
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Jardim da Praça do Império", 
+            "Descricao" : "Em frente ao Mosteiro dos Jerónimos, o Jardim da Praça do Império encanta com a beleza, os cuidados, as inúmeras oliveiras. É um bom momento para sentar-se e descansar.", 
+            "Img" : "jardimimperio.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.695729, 
+                    -9.205849
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Mosteiro dos Jerónimos", 
+            "Descricao" : "O Mosteiro dos Jerónimos é uma das construções mais bonitas de portugal. Muitos turistas visitam apenas o exterior do mosteiro e a igreja que faz parte dele (Igreja Santa Maria Belém), por ter entrada livre. A igreja é popular pela arquitetura impressionante e por conter o túmulo de Camões e o de Vasco da Gama. Vá além. Entre no mosteiro. Vivencie um pouco mais da História, aprecie a fundo a arquitetura e encontre outros túmulos famosos, como o de Fernando Pessoa e o de Alexandre Herculano.", 
+            "Img" : "mosteirojeronimos.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.697355, 
+                    -9.206364
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Pastéis de Belém", 
+            "Descricao" : "A poucos passos do Mosteiro dos Jerónimos, encontramos um dos pontos mais cobiçados por turistas em Lisboa: a casa Pastéis de Belém. Chegou a hora de você experimentar o legítimo, o único pastel de Belém, com fórmula guardada a sete chaves.", 
+            "Img" : "pasteisbelem.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.697442, 
+                    -9.203245
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Rua dos Restaurantes", 
+            "Descricao" : "A poucos metros dos Pastéis de Belém, depois de você cruzar a Travessa da Praça, uma pequena rua oferece bons restaurantes com comidas típicas portuguesas. Pode ser uma boa idéia você almoçar na zona e depois comer uns pastéis de Belém da casa especializada.", 
+            "Img" : "ruarestaurantesbelem.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.697252, 
+                    -9.202494
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Museu Nacional dos Coches", 
+            "Descricao" : "Criado por iniciativa da Rainha D. Amélia de Orleãns e Bragança, mulher do rei D. Carlos I, o museu foi inaugurado em 1905. Destacam-se as viaturas de gala da Casa Real Portuguesa, os arreios e acessórios de cavalaria, os instrumentos musicais da Charamela Real, os fardamentos, armas e instrumentos simbólicos do pessoal da Casa Real.", 
+            "Img" : "museucoches.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.696607, 
+                    -9.198854
+                ]
+            }
+        }
+    ], 
+    "Tipo" : [
+        "Historica", 
+        "Gastronomica"
+    ], 
+    "imagem" : "torrebelem.jpg", 
+    "Classificacao" : 3.6, 
+    "Avaliacoes" : "679", 
+    "Dificuldade" : "Facil", 
+    "Duracao" : "4:00", 
+    "Deficientes" : true, 
+    "Pais" : "Portugal", 
+    "Cidade" : "Lisboa"
+}
+{ 
+    "_id" : ObjectId("5c07f8d975425b32f802b0ca"), 
+    "Nome" : "Zona Ribeirinha do Porto", 
+    "Descricao" : "Nesta rota podemos visitar as Caves do nosso Vinho do Porto e ver no passeio do teleférico de Gaia, as cidades de uma outra perspectiva tal como fazer um cruzeiro pelo douro. Pode tambem aproveitar uma esplanada com vista para o rio. Um dia no porto nunca estaria completo sem uma pequena caminhada nas margens do Douro.", 
+    "PoI" : [
+        {
+            "Nome" : "Cais de Gaia", 
+            "Descricao" : "Durante muitos séculos, aqui se localizou um porto fluvial de onde eram exportadas diversas mercadorias, com especial relevo para o vinho do Porto. É possivel realizar um passeio de barco pelo o rio douro ou andar no teleferico de gaia ", 
+            "Img" : "caisgaia.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    41.137363, 
+                    -8.615936
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Tabuleiro Inferior Ponte D. Luís I", 
+            "Descricao" : "A Ponte de D. Luís I ou Ponte Luiz I, é uma ponte em estrutura metálica com dois tabuleiros, construída entre os anos 1881 e 1888, ligando as cidades do Porto e Vila Nova de Gaia (margem norte e sul, respetivamente) separadas pelo rio Douro", 
+            "Img" : "pontedluis.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    41.138818, 
+                    -8.609483
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Cais da Ribeira", 
+            "Descricao" : "A Ribeira é um dos locais mais antigos e típicos da cidade Porto, em Portugal. Localizada na freguesia de São Nicolau, junto ao Rio Douro, faz parte do Centro Histórico do Porto, Património Mundial da UNESCO. É, actualmente, uma zona muito frequentada por turistas e local de concentração de bares e restaurantes.", 
+            "Img" : "caisribeira.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    41.140542, 
+                    -8.611576
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Sé do Porto", 
+            "Descricao" : "A Sé / Catedral da cidade do Porto, situada no coração do centro histórico da cidade do Porto, é um dos principais e mais antigos monumentos de Portugal.", 
+            "Img" : "seporto.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    41.142431, 
+                    -8.611764
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Tabuleiro Superior Ponte D. Luís I", 
+            "Descricao" : "O tabuleiro Superior da ponte D.Luis I é um dos melhores miradouros sobre o rio douro", 
+            "Img" : "tabuleirosuperior.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    41.142474, 
+                    -8.610163
+                ]
+            }
+        }
+    ], 
+    "Tipo" : [
+        "Miradouro", 
+        "Historica", 
+        "Gastronomica"
+    ], 
+    "imagem" : "caisgaia.jpg", 
+    "Classificacao" : 4.9, 
+    "Avaliacoes" : "650", 
+    "Dificuldade" : "Media", 
+    "Duracao" : "Full-Day", 
+    "Deficientes" : true, 
+    "Pais" : "Portugal", 
+    "Cidade" : "Porto"
+}
+{ 
+    "_id" : ObjectId("5c110d4df3da60b433a884dd"), 
+    "Nome" : "Baixa Pombalina", 
+    "Descricao" : "A baixa de Lisboa, também chamada Baixa Pombalina ou Lisboa Pombalina por ter sido edificada por ordem do Marquês de Pombal, na sequência do terramoto de 1755, cobrindo uma área de cerca de 255 hectares. Situa-se entre o Terreiro do Paço, junto ao rio Tejo, e o Rossio e a Praça da Figueira, e longitudinalmente entre o Cais do Sodré, o Chiado e o Carmo, de um lado, e a Sé e a colina do Castelo de São Jorge, do outro.", 
+    "PoI" : [
+        {
+            "Nome" : "Restauradores", 
+            "Descricao" : "A Praça dos Restauradores situa-se na Baixa de Lisboa, no extremo meridional da Avenida da Liberdade, a poucos metros da Praça de Dom Pedro IV ", 
+            "Img" : "restauradores.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.715227, 
+                    -9.141661
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Rossio", 
+            "Descricao" : "A Praça de D. Pedro IV, mais conhecida por Rossio (na grafia antiga Rocio), é uma praça da Baixa de Lisboa, tem constituído um dos centros nevrálgicos da cidade.", 
+            "Img" : "rossio.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.71372, 
+                    -9.139657
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Elevador de S.Justa", 
+            "Descricao" : "O Elevador de Santa Justa, também referido como Elevador do Carmo, é um sistema de transporte público, situado no centro da cidade de Lisboa, no distrito de mesmo nome, em Portugal. Liga a rua do Ouro e a rua do Carmo ao largo do Carmo e constitui-se num dos monumentos mais interessantes da Baixa de Lisboa.", 
+            "Img" : "elevadorsantajusta.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.712171, 
+                    -9.13918
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Armazens do Chiado", 
+            "Descricao" : "Os Grandes Armazéns do Chiado são uma casa de comércio localizada na confluência da Rua do Carmo com a Rua Nova do Almada e a Rua Garrett.", 
+            "Img" : "armazensdochiado.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.711011, 
+                    -9.139666
+                ]
+            }
+        }, 
+        {
+            "Nome" : "Arco da Rua Augusta", 
+            "Descricao" : "O Arco do Triunfo da Rua Augusta é um arco triunfal situado na parte norte da Praça do Comércio, sobre a Rua Augusta, em Lisboa, Portugal.", 
+            "Img" : "ruaaugusta.jpg", 
+            "coordenadas" : {
+                "type" : "Point", 
+                "coordinates" : [
+                    38.708383, 
+                    -9.136789
+                ]
+            }
+        }
+    ], 
+    "Tipo" : [
+        "Turistica"
+    ], 
+    "imagem" : "ruaaugusta.jpg", 
+    "Classificacao" : 4.4, 
+    "Avaliacoes" : "800", 
+    "Dificuldade" : "Facil", 
+    "Duracao" : "3:00", 
+    "Deficientes" : true, 
+    "Pais" : "Portugal", 
+    "Cidade" : "Lisboa"
+}
