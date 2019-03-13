@@ -12,6 +12,7 @@ router.get('/route/:routeid', (req, res) => {
 });
 
 router.get('/routes', (req, res) => {
+	console.log("chegou")
     dataBaseRoute.getRoutes((err, result) => {
         res.send(result);
     })
