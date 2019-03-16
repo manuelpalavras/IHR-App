@@ -1,7 +1,7 @@
-package com.example.exampleapi.api.model.User
+package com.example.ihr.api.model.User
 
 import com.google.gson.annotations.SerializedName
-import java.util.*
+import ihr.api.model.User.FavoriteObject
 
 class UserObject {
 

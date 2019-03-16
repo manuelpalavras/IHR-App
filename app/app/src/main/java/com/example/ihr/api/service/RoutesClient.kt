@@ -1,8 +1,7 @@
-package com.example.exampleapi.api.service
+package com.example.ihr.api.service
 
-import com.example.exampleapi.api.model.RouteObject
+import com.example.ihr.api.model.RouteObject
 import retrofit2.Call
-import retrofit2.http.Field
 import retrofit2.http.GET
 import retrofit2.http.Path
 

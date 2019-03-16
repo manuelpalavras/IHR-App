@@ -1,7 +1,6 @@
-package com.example.exampleapi.api.model
+package com.example.ihr.api.model
 
 import com.google.gson.annotations.SerializedName
-import org.json.JSONObject
 
 class RouteObject {
 
@@ -10,6 +9,10 @@ class RouteObject {
 
     fun getName(): String {
         return name
+    }
+
+    constructor(nome : String) {
+        name = nome;
     }
 
 }
