@@ -132,3 +132,7 @@ exports.getRoutesOfPoI = function (PoI, cb) {
         })
     })
 };
+
+exports.getImage = function (img, cb) {
+
+}

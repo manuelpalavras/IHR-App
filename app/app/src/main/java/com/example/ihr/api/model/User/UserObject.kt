@@ -112,7 +112,7 @@ class UserObject {
     fun addAppointment(newAppointment: AppointmentObject): Boolean {
         return try {
 
-            appointment?.add(newAppointment)
+            appointment.add(newAppointment)
 
             true
 
@@ -126,7 +126,7 @@ class UserObject {
 
         return try {
 
-            appointment?.removeAt(index)
+            appointment.removeAt(index)
 
             true
 

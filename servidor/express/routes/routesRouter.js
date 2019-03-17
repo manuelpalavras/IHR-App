@@ -1,9 +1,10 @@
 'use strict';
-
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 const dataBaseRoute = require('../models/databaseRoute');
 const dataBaseCity = require('../models/databaseCity');
+
 
 router.get('/route/:routeid', (req, res) => {
     dataBaseRoute.getRouteByID(req.params.routeid, (err, result) => {
@@ -12,9 +13,9 @@ router.get('/route/:routeid', (req, res) => {
 });
 
 router.get('/routes', (req, res) => {
-	console.log("chegou")
-    dataBaseRoute.getRoutes((err, result) => {
-        res.send(result);
+    console.log("chegou")
+    dataBaseRoute.getRoutes((err, listOfResults) => {
+        res.send(listOfResults);
     })
 });
 
@@ -42,5 +43,12 @@ router.get('/classification/:Rota', (req, res) => {
         res.send(result);
     })
 });
+
+router.get('/route/image/:name', (req, res) => {
+
+    res.sendFile(path.resolve(__dirname + "/../public/image/Imagens/" + req.params.name))
+
+});
+
 
 module.exports = router;
