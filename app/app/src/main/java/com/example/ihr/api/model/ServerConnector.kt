@@ -14,10 +14,10 @@ class ServerConnector {
             get() {
 
                 val addressHome = "http://192.168.1.4:8080" // default ip address casa
-                val addressUni = "http://10.72.110.176:8080" // default ip address universidade, muda todos os dias
+                val addressUni = "http://10.72.10.196:8080" // default ip address universidade, muda todos os dias
 
                 val builder: Retrofit.Builder = Retrofit.Builder()
-                    .baseUrl(addressHome)
+                    .baseUrl(addressUni)
                     .addConverterFactory(GsonConverterFactory.create()) // definir caracteristas de Retrofit Object
 
                 return builder.build() // criação de Retrofit Object com a build feita

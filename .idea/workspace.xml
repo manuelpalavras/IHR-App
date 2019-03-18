@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e83574-592d-43bd-8f0f-0159139e776a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/CoordinateObject.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/PoiObject.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IHR-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IHR-App.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/RouteObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/RouteObject.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/User/UserObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/User/UserObject.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/RoutesClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/RoutesClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/fragments/RouteFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/fragments/RouteFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/route_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/route_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -115,7 +102,7 @@
       <file leaf-file-name="databaseRoute.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="884">
               <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
               <folding>
                 <element signature="e#467#674#0" />
@@ -162,146 +149,6 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/abbrev/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/accepts/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/acorn-globals/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/acorn/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/align-text/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/amdefine/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/array-flatten/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/asap/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/async/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/basic-auth/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/bluebird/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/body-parser/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/bson/browser_build/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/bson/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/buffer-from/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/bytes/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/camelcase/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/center-align/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/character-parser/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/clean-css/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/clean-css/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/cliui/node_modules/wordwrap/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/cliui/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/concat-stream/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/consolidate/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/constantinople/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/content-disposition/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/content-type/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/cookie-parser/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/cookie-signature/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/cookie/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/core-util-is/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/css-parse/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/css-stringify/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/css/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/debug/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/decamelize/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/depd/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/destroy/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/ee-first/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/encodeurl/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/escape-html/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/etag/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/express/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/finalhandler/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/forwarded/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/fresh/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/graceful-readlink/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/handlebars/node_modules/commander/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/handlebars/node_modules/optimist/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/handlebars/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/handlebars/node_modules/uglify-js/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/handlebars/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/hogan.js/node_modules/mkdirp/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/hogan.js/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/hogan/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/html/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/http-errors/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/iconv-lite/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/inherits/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/ipaddr.js/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/is-buffer/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/is-promise/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/isarray/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/jade/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/js-tokens/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/jstransformer/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/kind-of/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/lazy-cache/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/lodash/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/longest/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/loose-envify/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/media-typer/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/memory-pager/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/merge-descriptors/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/methods/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mime-db/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mime-types/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mime/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/minimist/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mkdirp/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mongodb-core/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/mongodb/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/morgan/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/ms/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/negotiator/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/nopt/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/object-assign/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/on-finished/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/on-headers/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/optimist/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/parseurl/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/path-to-regexp/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/process-nextick-args/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/promise/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/prop-types/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/proxy-addr/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/qs/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/range-parser/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/raw-body/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/react/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/readable-stream/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/repeat-string/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/require_optional/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/require_optional/test/nestedTest/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/resolve-from/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/right-align/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/safe-buffer/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/safer-buffer/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/saslprep/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/scheduler/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/semver/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/send/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/serve-static/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/setprototypeof/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/sparse-bitfield/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/statuses/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/string_decoder/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/transformers/node_modules/is-promise/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/transformers/node_modules/promise/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/transformers/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/transformers/node_modules/uglify-js/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/transformers/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/type-is/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/typedarray/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/uglify-js/node_modules/source-map/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/uglify-js/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/uglify-to-browserify/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/unpipe/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/util-deprecate/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/utils-merge/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/vary/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/void-elements/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/window-size/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/with/node_modules/acorn/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/with/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/wordwrap/package.json" />
-      <path value="$PROJECT_DIR$/servidor/express/node_modules/yargs/package.json" />
       <path value="$PROJECT_DIR$/servidor/express/package.json" />
     </packageJsonPaths>
   </component>
@@ -455,11 +302,12 @@
       <workItem from="1551720688031" duration="402000" />
       <workItem from="1552828716394" duration="6328000" />
       <workItem from="1552844558643" duration="7889000" />
+      <workItem from="1552904434182" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14619000" />
+    <option name="totallyTimeSpent" value="14709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -474,16 +322,16 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
@@ -502,7 +350,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js</url>
           <line>17</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -510,6 +357,51 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+          <folding>
+            <element signature="e#467#674#0" />
+            <element signature="e#1017#3262#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -605,7 +497,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="884">
           <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
           <folding>
             <element signature="e#467#674#0" />

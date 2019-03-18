@@ -1,8 +1,14 @@
 package com.example.ihr.api.model.Route
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-class RouteObject {
+
+class RouteObject() : Parcelable {
+
+
+    // ------------------------------
 
     @SerializedName("Nome")
     private lateinit var name : String
@@ -122,6 +128,44 @@ class RouteObject {
 
     // ------------------------------
 
+    @SerializedName("Avaliacoes")
+    private var numberEvalutation : Int = 0
+
+    fun getEvaluation() : Int {
+        return numberEvalutation
+    }
+
+    fun setEvalution(newNumberEvaluation: Int) {
+        numberEvalutation = newNumberEvaluation
+    }
+
+    // ------------------------------
+
+    @SerializedName("Dificuldade")
+    private  lateinit var difficulty : String
+
+    fun getDifficulty() : String {
+        return difficulty
+    }
+
+    fun setDifficulty(newDificulty: String) {
+        difficulty = newDificulty
+    }
+
+    // ------------------------------
+    @SerializedName("Duracao")
+    private  lateinit var duration : String
+
+    fun getDuration() : String {
+        return duration
+    }
+
+    fun setDuration(newDuration: String) {
+        duration = newDuration
+    }
+
+    // ------------------------------
+
     @SerializedName("Pais")
     private lateinit var country : String
 
@@ -145,5 +189,53 @@ class RouteObject {
     fun setCity(newCity: String) {
         city = newCity
     }
+
+    //------------ GENERATED ----------------------------------
+
+    constructor(parcel: Parcel) : this() {
+        name = parcel.readString()
+        description = parcel.readString()
+        type = parcel.createStringArrayList()
+        image = parcel.readString()
+        classification = parcel.readDouble()
+        handyCap = parcel.readByte() != 0.toByte()
+        numberEvalutation = parcel.readInt()
+        difficulty = parcel.readString()
+        duration = parcel.readString()
+        country = parcel.readString()
+        city = parcel.readString()
+        poi = parcel.createTypedArrayList(PoiObject)
+    }
+
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(name)
+        parcel.writeString(description)
+        parcel.writeStringList(type)
+        parcel.writeString(image)
+        parcel.writeDouble(classification)
+        parcel.writeByte(if (handyCap) 1 else 0)
+        parcel.writeInt(numberEvalutation)
+        parcel.writeString(difficulty)
+        parcel.writeString(duration)
+        parcel.writeString(country)
+        parcel.writeString(city)
+        parcel.writeTypedArray(poi.toTypedArray(),flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<RouteObject> {
+        override fun createFromParcel(parcel: Parcel): RouteObject {
+            return RouteObject(parcel)
+        }
+
+        override fun newArray(size: Int): Array<RouteObject?> {
+            return arrayOfNulls(size)
+        }
+    }
+
 
 }

@@ -41,7 +41,10 @@ class MainActivity : AppCompatActivity() {
                 val fragment = RouteFragment(context, R.layout.route_fragment, list)
 
                 listView.adapter = fragment
+
             }
+
+
 
         })
 

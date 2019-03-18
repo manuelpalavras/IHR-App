@@ -1,8 +1,10 @@
 package com.example.ihr.api.model.Route
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-class PoiObject {
+class PoiObject() : Parcelable {
 
     @SerializedName("Nome")
     private lateinit var name : String
@@ -44,6 +46,7 @@ class PoiObject {
     @SerializedName ("coordenadas")
     private lateinit var coordenates : CoordinateObject
 
+
     fun getCoordenates () : CoordinateObject{
         return coordenates
     }
@@ -52,6 +55,34 @@ class PoiObject {
         coordenates = newCoordenates
     }
 
+
+
+    constructor(parcel: Parcel) : this() {
+        name = parcel.readString()
+        description = parcel.readString()
+        image = parcel.readString()
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(name)
+        parcel.writeString(description)
+        parcel.writeString(image)
+
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<PoiObject> {
+        override fun createFromParcel(parcel: Parcel): PoiObject {
+            return PoiObject(parcel)
+        }
+
+        override fun newArray(size: Int): Array<PoiObject?> {
+            return arrayOfNulls(size)
+        }
+    }
 
 
 }
