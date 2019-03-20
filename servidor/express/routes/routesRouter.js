@@ -45,8 +45,8 @@ router.get('/classification/:Rota', (req, res) => {
 });
 
 router.get('/route/image/:name', (req, res) => {
-
-    res.sendFile(path.resolve(__dirname + "/../public/image/Imagens/" + req.params.name))
+	
+    res.send("{\"path\":\"" + "/image/Imagens/" + req.params.name + "\"}")
 
 });
 

@@ -16,7 +16,7 @@ interface RoutesClient {
     fun getRouteById(@Path("routeId") routeID : String) : Call<RouteObject>
 
     @GET("/route/image/{imageName}")
-    fun getImage(@Path("imageName") ImageName : String) : Call<Picture>
+    fun getImage(@Path("imageName") ImageName : String) : Call<String>
 
 
 

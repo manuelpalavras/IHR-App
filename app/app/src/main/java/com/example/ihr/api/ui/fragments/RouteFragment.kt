@@ -1,5 +1,6 @@
 package com.example.ihr.api.ui.fragments
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -13,12 +14,24 @@ import com.example.ihr.R
 import com.example.ihr.api.model.Route.RouteObject
 import com.example.ihr.api.ui.activities.RoteActivity
 import java.io.Serializable
+import android.graphics.drawable.Drawable
+import com.example.ihr.api.model.ServerConnector
+import com.squareup.picasso.Picasso
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.io.IOException
+import java.io.InputStream
+
 
 class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?) :
-    ArrayAdapter<RouteObject>(context, resource, objects) , Serializable {
+    ArrayAdapter<RouteObject>(context, resource, objects), Serializable {
 
     val ctx: Context = context
     val list: List<RouteObject>? = objects
+
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = LayoutInflater.from(ctx)
@@ -30,19 +43,7 @@ class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?
         val starRoute: TextView = view.findViewById(R.id.descriptionPoi)
         val categoryRoute: TextView = view.findViewById(R.id.categoryRoute)
 
-//        val call : Call<Picture> = ServerConnector.getRoutesClient().getImage(list?.get(position)?.getImage().toString())
-//
-//        call.enqueue(object : Callback<Picture> {
-//            override fun onFailure(call: Call<Picture>, t: Throwable) {
-//
-//            }
-//
-//            override fun onResponse(call: Call<Picture>, response: Response<Picture>) {
-//                val bitmap : Bitmap = Bitmap.createBitmap(response.body())
-//                routeImage.setImageBitmap(bitmap)
-//            }
-//        })
-
+        Picasso.get().load(ServerConnector.address + "/image/Imagens/" + list?.get(position)?.getImage().toString()).resize(150, 150).into(routeImage)
         nomeRoute.text = list?.get(position)?.getName()
         starRoute.text = list?.get(position)?.getClassification().toString()
         categoryRoute.text = list?.get(position)?.getType().toString()
