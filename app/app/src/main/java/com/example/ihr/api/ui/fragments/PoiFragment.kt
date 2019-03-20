@@ -10,6 +10,8 @@ import android.widget.TextView
 import com.example.ihr.R
 import com.example.ihr.api.model.Route.PoiObject
 import com.example.ihr.api.model.Route.RouteObject
+import com.example.ihr.api.model.ServerConnector
+import com.squareup.picasso.Picasso
 import java.io.Serializable
 
 class PoiFragment(context: Context, resource: Int, objects: List<PoiObject>?) :
@@ -27,6 +29,7 @@ class PoiFragment(context: Context, resource: Int, objects: List<PoiObject>?) :
         val nomePoi: TextView = view.findViewById(R.id.nomePoi)
         val descriptionPoi: TextView = view.findViewById(R.id.descriptionPoi)
 
+        Picasso.get().load(ServerConnector.address + "/image/Imagens/" + list?.get(position)?.getImage().toString()).resize(150, 150).into(poiImage)
         nomePoi.text = list?.get(position)?.getName()
         descriptionPoi.text = list?.get(position)?.getDescription()
 
