@@ -27,22 +27,22 @@ class RoteActivity : AppCompatActivity() {
         val durationRoute: TextView = findViewById(R.id.durationRoute)
         val ratingNumberRoute: TextView = findViewById(R.id.ratingNumberRoute)
         val difficultyRoute: TextView = findViewById(R.id.dificultyRoute)
-        val countryRoute: TextView = findViewById(R.id.countryRoute)
         val cityRoute: TextView = findViewById(R.id.cityRoute)
-        val listView : ListView = findViewById(R.id.poiList)
+        val typeRoute: TextView = findViewById(R.id.typeRoute)
 
+
+
+        typeRoute.text = list?.getType().toString()
         Picasso.get().load(ServerConnector.address + "/image/Imagens/" + list?.getImage().toString()).resize(150, 150).into(imageRoute)
         descriptionRoute.text = list?.getDescription()
         nameRoute.text = list?.getName()
-        classificationRoute.text = "CLASSIFICAÇÃO: " + list?.getClassification().toString()
-        durationRoute.text = "DURAÇÃO: " + list?.getDuration()
-        ratingNumberRoute.text ="AVALIAÇÕES: " + list?.getEvaluation().toString()
-        difficultyRoute.text ="DIFICULDADE: " + list?.getDifficulty()
-        countryRoute.text = "PAÍS: " + list?.getCountry()
-        cityRoute.text ="CIDADE: " + list?.getCity()
+        classificationRoute.text =  list?.getClassification().toString()
+        durationRoute.text =  list?.getDuration()
+        ratingNumberRoute.text = list?.getEvaluation().toString()
+        difficultyRoute.text = list?.getDifficulty()
+        cityRoute.text = list?.getCity()
 
-        val fragment = PoiFragment(this, R.layout.route_fragment, list?.getPoi())
-        listView.adapter = fragment
+
 
 
 
