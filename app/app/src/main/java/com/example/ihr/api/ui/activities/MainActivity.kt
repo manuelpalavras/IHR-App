@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<List<RouteObject>> {
             override fun onFailure(call: Call<List<RouteObject>>, t: Throwable) {
 
-            }
+                }
 
             override fun onResponse(call: Call<List<RouteObject>>, response: Response<List<RouteObject>>) {
                 list = response.body()
