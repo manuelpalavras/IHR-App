@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 
 class CoordinateObject() : Parcelable {
 
-    @SerializedName("tipo")
+    @SerializedName("type")
     private lateinit var type : String
 
     fun getType () : String {
@@ -19,26 +19,27 @@ class CoordinateObject() : Parcelable {
 
 
     @SerializedName("coordinates")
-    private lateinit var coordinates : List<Double>
+    private lateinit var coordinates : List<Any>
 
 
 
-    fun getCoordinates() : List<Double> {
+    fun getCoordinates() : List<Any> {
         return coordinates
     }
 
-    fun setCoordinates(newCoordinates : List<Double>) {
+    fun setCoordinates(newCoordinates : List<Any>) {
         coordinates = newCoordinates
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(type)
+        parcel.writeList(coordinates)
 
     }
 
     constructor(parcel: Parcel) : this() {
         type = parcel.readString()
-
+        coordinates = parcel.readArrayList(Double.javaClass.classLoader)
 
     }
 

@@ -3,6 +3,9 @@ package com.example.ihr.api.model
 
 import com.example.ihr.api.service.RoutesClient
 import com.example.ihr.api.service.UserClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -21,7 +24,8 @@ class ServerConnector {
                 return builder.build() // criação de Retrofit Object com a build feita
             }
 
-        fun getRoutesClient() : RoutesClient {
+        val routesClient: RoutesClient
+            get() {
 
                 return retrofit.create(RoutesClient::class.java)
             }
@@ -31,14 +35,14 @@ class ServerConnector {
                 return retrofit.create(UserClient::class.java)
             }
 
-        val address : String
-        get() {
+       val address: String
+            get() {
 
-            val addressHome = "http://192.168.1.4:8080" // default ip address casa
-            val addressUni = "http://10.72.115.178:8080" // default ip address universidade, muda todos os dias
+                val addressHome = "http://192.168.1.74:8080" // default ip address casa
+                val addressUni = "http://10.72.110.136:8080" // default ip address universidade, muda todos os dias
 
-            return addressUni
-        }
+                return addressHome
+            }
 
 
     }

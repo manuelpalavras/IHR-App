@@ -24,7 +24,7 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    var routes = ServerConnector.getRoutesClient()
+    var routes = ServerConnector.routesClient
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

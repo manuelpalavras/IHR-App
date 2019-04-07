@@ -43,11 +43,13 @@ class PoiObject() : Parcelable {
         image = newImage
     }
 
+    // ------------------------------
+
     @SerializedName ("coordenadas")
     private lateinit var coordenates : CoordinateObject
 
 
-    fun getCoordenates () : CoordinateObject{
+    fun getCoordenates() : CoordinateObject{
         return coordenates
     }
 
@@ -55,18 +57,23 @@ class PoiObject() : Parcelable {
         coordenates = newCoordenates
     }
 
+    // ------------------------------
+
 
 
     constructor(parcel: Parcel) : this() {
         name = parcel.readString()
         description = parcel.readString()
         image = parcel.readString()
+        coordenates = parcel.readParcelable(CoordinateObject.javaClass.classLoader)
+
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
         parcel.writeString(description)
         parcel.writeString(image)
+        parcel.writeParcelable(coordenates,flags)
 
     }
 

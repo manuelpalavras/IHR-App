@@ -1,6 +1,5 @@
 package com.example.ihr.api.ui.fragments
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -12,18 +11,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.ihr.R
 import com.example.ihr.api.model.Route.RouteObject
-import com.example.ihr.api.ui.activities.RoteActivity
+import com.example.ihr.api.ui.activities.RouteActivity
 import java.io.Serializable
-import android.graphics.drawable.Drawable
 import com.example.ihr.api.model.ServerConnector
+import com.example.ihr.api.ui.activities.MapActivity
 import com.squareup.picasso.Picasso
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.io.IOException
-import java.io.InputStream
 
 
 class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?) :
@@ -49,7 +41,7 @@ class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?
         categoryRoute.text = list?.get(position)?.getType().toString()
 //
         view.setOnClickListener {
-            val intent = Intent(this.context, RoteActivity::class.java)
+            val intent = Intent(this.context, RouteActivity::class.java)
             val bundle = Bundle()
             bundle.putParcelable("rota", list?.get(position))
             intent.putExtras(bundle)
