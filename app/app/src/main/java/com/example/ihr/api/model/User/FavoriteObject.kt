@@ -1,10 +1,12 @@
-package ihr.api.model.User
+package com.example.ihr.api.model.User
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 
 
-class FavoriteObject {
+class FavoriteObject() : Parcelable {
 
 
 
@@ -91,6 +93,8 @@ class FavoriteObject {
     @SerializedName("Cidades")
     private var cities : MutableList<String> = mutableListOf()
 
+
+
     fun getCities(): MutableList<String> {
         return cities
     }
@@ -102,7 +106,7 @@ class FavoriteObject {
     fun addCity(newCity: String): Boolean {
         return try {
 
-            cities?.add(newCity)
+            cities.add(newCity)
 
             true
 
@@ -116,13 +120,42 @@ class FavoriteObject {
 
         return try {
 
-            cities?.removeAt(index)
+            cities.removeAt(index)
 
             true
 
         } catch (e: Exception) {
 
             false
+        }
+    }
+
+    constructor(parcel: Parcel) : this() {
+
+        routes = parcel.createStringArrayList()
+        guides = parcel.createStringArrayList()
+        cities = parcel.createStringArrayList()
+
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeStringList(routes)
+        parcel.writeStringList(guides)
+        parcel.writeStringList(cities)
+
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<FavoriteObject> {
+        override fun createFromParcel(parcel: Parcel): FavoriteObject {
+            return FavoriteObject(parcel)
+        }
+
+        override fun newArray(size: Int): Array<FavoriteObject?> {
+            return arrayOfNulls(size)
         }
     }
 

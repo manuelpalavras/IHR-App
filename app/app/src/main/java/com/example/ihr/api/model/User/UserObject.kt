@@ -1,9 +1,11 @@
 package com.example.ihr.api.model.User
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import ihr.api.model.User.FavoriteObject
+import com.example.ihr.api.model.User.FavoriteObject
 
-class UserObject {
+class UserObject() : Parcelable {
 
     @SerializedName("Nome")
     private lateinit var name: String
@@ -51,7 +53,7 @@ class UserObject {
         return birthDate
     }
 
-    fun setBirthDate(birthDate : String) {
+    fun setBirthDate(birthDate: String) {
         this.birthDate = birthDate
     }
 
@@ -67,7 +69,6 @@ class UserObject {
     fun setFavorite(newFavoriteList: FavoriteObject) {
         favorite = newFavoriteList
     }
-
 
 
 // ------------------------------
@@ -135,9 +136,48 @@ class UserObject {
             false
         }
     }
-}
 
 
 // ------------------------------
 
+    constructor(parcel: Parcel) : this() {
+        name = parcel.readString()
+        email = parcel.readString()
+        nacionality = parcel.readString()
+        birthDate = parcel.readString()
+        guide = parcel.readByte() != 0.toByte()
+        favorite = parcel.readParcelable(FavoriteObject.javaClass.classLoader)
+        appointment = parcel.createTypedArrayList(AppointmentObject)
+        if(guide)
+        availability = parcel.createTypedArrayList(AvailabilityObject)
 
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(name)
+        parcel.writeString(email)
+        parcel.writeString(nacionality)
+        parcel.writeString(birthDate)
+        parcel.writeByte(if (guide) 1 else 0)
+        parcel.writeParcelable(favorite,flags)
+        parcel.writeTypedArray(appointment.toTypedArray(),flags)
+        if(guide)
+        parcel.writeTypedArray(availability.toTypedArray(),flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<UserObject> {
+        override fun createFromParcel(parcel: Parcel): UserObject {
+            return UserObject(parcel)
+        }
+
+        override fun newArray(size: Int): Array<UserObject?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+
+}

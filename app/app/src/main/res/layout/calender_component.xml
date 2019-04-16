@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".api.ui.activities.MainActivity">
+
+    <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scheduler"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.488"/>
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/alert_progress_drawable"
+            android:id="@+id/routeImage"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/descriptionRoute" app:layout_constraintHorizontal_bias="0.4"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/routeName"
+    />
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="395dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/scheduler" android:layout_marginTop="12dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="194dp"
+            android:layout_height="151dp"
+            android:id="@+id/descriptionRoute"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/routeName"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="362dp"
+            android:layout_height="23dp"
+            android:id="@+id/routeName" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" android:layout_marginTop="8dp"/>
+</android.support.constraint.ConstraintLayout>

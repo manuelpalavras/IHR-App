@@ -1,4 +1,4 @@
-package com.example.ihr.api.ui.fragments
+package com.example.ihr.api.ui.components
 
 import android.content.Context
 import android.content.Intent
@@ -14,11 +14,10 @@ import com.example.ihr.api.model.Route.RouteObject
 import com.example.ihr.api.ui.activities.RouteActivity
 import java.io.Serializable
 import com.example.ihr.api.model.ServerConnector
-import com.example.ihr.api.ui.activities.MapActivity
 import com.squareup.picasso.Picasso
 
 
-class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?) :
+class RouteComponent(context: Context, resource: Int, objects: List<RouteObject>?) :
     ArrayAdapter<RouteObject>(context, resource, objects), Serializable {
 
     val ctx: Context = context
@@ -28,7 +27,7 @@ class RouteFragment(context: Context, resource: Int, objects: List<RouteObject>?
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = LayoutInflater.from(ctx)
 
-        val view: View = inflater.inflate(R.layout.route_fragment, null)
+        val view: View = inflater.inflate(R.layout.route_component, null)
 
         val routeImage: ImageView = view.findViewById(R.id.poiImage)
         val nomeRoute: TextView = view.findViewById(R.id.nomePoi)
