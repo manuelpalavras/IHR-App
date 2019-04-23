@@ -4,13 +4,15 @@ import com.example.ihr.R
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Color
 import android.location.Location
+import android.location.LocationManager
+import android.location.LocationProvider
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import com.example.ihr.BuildConfig
+import com.example.ihr.api.model.Route.PoiObject
 import com.example.ihr.api.model.Route.RouteObject
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
@@ -21,21 +23,19 @@ import com.mapbox.android.core.location.LocationEnginePriority
 import com.mapbox.android.core.location.LocationEngineProvider
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
+import com.mapbox.api.directions.v5.DirectionsCriteria
 import com.mapbox.api.directions.v5.models.DirectionsResponse
 import com.mapbox.api.directions.v5.models.DirectionsRoute
-import com.mapbox.core.constants.Constants
-import com.mapbox.geojson.LineString
 import com.mapbox.geojson.Point
 import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.annotations.Marker
 import com.mapbox.mapboxsdk.annotations.MarkerOptions
-import com.mapbox.mapboxsdk.annotations.PolylineOptions
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.location.LocationComponent
 import com.mapbox.mapboxsdk.location.modes.CameraMode
 import com.mapbox.mapboxsdk.maps.MapboxMap
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback
-import com.mapbox.mapboxsdk.style.light.Position
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncher
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncherOptions
 import com.mapbox.services.android.navigation.ui.v5.route.NavigationMapRoute
@@ -47,13 +47,16 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MapActivity : AppCompatActivity(),
-    PermissionsListener, LocationEngineListener, OnMapReadyCallback, MapboxMap.OnMapClickListener {
+    PermissionsListener, LocationEngineListener, OnMapReadyCallback, MapboxMap.OnMarkerClickListener {
 
     //1
     val REQUEST_CHECK_SETTINGS = 1
     var settingsClient: SettingsClient? = null
+    private val TAG = "MapActivity"
 
     //2
+
+    private var mLocationManager: LocationManager? = null
     private lateinit var rota: RouteObject
     private lateinit var map: MapboxMap
     private lateinit var permissionManager: PermissionsManager
@@ -68,6 +71,7 @@ class MapActivity : AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Mapbox.getInstance(this, BuildConfig.API_KEY)
+        mLocationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
         setContentView(R.layout.activity_map)
         mapbox.onCreate(savedInstanceState)
         mapbox.getMapAsync(this)
@@ -76,14 +80,6 @@ class MapActivity : AppCompatActivity(),
 
         rota = intent.extras.getParcelable("rota")
 
-        btnNavigate.setOnClickListener {
-            val navigationLauncherOptions = NavigationLauncherOptions.builder() //1
-                .directionsRoute(currentRoute) //2
-                .shouldSimulateRoute(true) //3
-                .build()
-
-            NavigationLauncher.startNavigation(this, navigationLauncherOptions) //4
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -125,12 +121,14 @@ class MapActivity : AppCompatActivity(),
         locationEngine?.removeLocationUpdates()
         locationComponent?.onStop()
         mapbox.onStop()
+        navigationMapRoute!!.onStop()
     }
 
     override fun onDestroy() {
         super.onDestroy()
         locationEngine?.deactivate()
         mapbox.onDestroy()
+
     }
 
     override fun onLowMemory() {
@@ -166,16 +164,21 @@ class MapActivity : AppCompatActivity(),
         location?.run {
             originLocation = this
             setCameraPosition(this)
+            getRoutes(rota)
         }
     }
 
+    @SuppressWarnings("MissingPermission")
     override fun onConnected() {
+        locationEngine?.requestLocationUpdates()
     }
 
     override fun onMapReady(mapboxMap: MapboxMap?) {
         //1
         map = mapboxMap ?: return
         //2
+        map.setStyle(getString(R.string.navigation_guidance_day))
+
         val locationRequestBuilder = LocationSettingsRequest.Builder().addLocationRequest(
             LocationRequest()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
@@ -197,6 +200,8 @@ class MapActivity : AppCompatActivity(),
                 }
             }
         }
+
+
     }
 
     //1
@@ -204,7 +209,6 @@ class MapActivity : AppCompatActivity(),
         if (PermissionsManager.areLocationPermissionsGranted(this)) {
             initializeLocationComponent()
             initializeLocationEngine()
-            map.addOnMapClickListener(this)
         } else {
             permissionManager = PermissionsManager(this)
             permissionManager.requestLocationPermissions(this)
@@ -218,16 +222,14 @@ class MapActivity : AppCompatActivity(),
         locationEngine?.priority = LocationEnginePriority.HIGH_ACCURACY
         locationEngine?.activate()
         locationEngine?.addLocationEngineListener(this)
-        var point1 = Point.fromLngLat(
-            rota.getPoi()[0].getCoordenates().getCoordinates()[0].toString().toDouble(),
-            rota.getPoi()[0].getCoordenates().getCoordinates()[1].toString().toDouble()
-        )
+
+
         val lastLocation = locationEngine?.lastLocation
         if (lastLocation != null) {
             originLocation = lastLocation
             setCameraPosition(lastLocation)
-            point1 = Point.fromLngLat(lastLocation.latitude, lastLocation.longitude)
         } else {
+
             locationEngine?.addLocationEngineListener(this)
         }
         rota.getPoi().forEach {
@@ -243,9 +245,11 @@ class MapActivity : AppCompatActivity(),
                         point
                     )
             )
+            map.setOnMarkerClickListener(this)
         }
 
-        getRoutes(point1, rota)
+        checkLocation()
+
 
     }
 
@@ -265,7 +269,7 @@ class MapActivity : AppCompatActivity(),
                 LatLng(
                     location.latitude,
                     location.longitude
-                ), 300.0
+                ), map.cameraPosition.zoom + 100
             )
         )
     }
@@ -276,53 +280,62 @@ class MapActivity : AppCompatActivity(),
         permissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    override fun onMapClick(point: LatLng) {
-        checkLocation()
-    }
-
     @SuppressLint("MissingPermission")
     private fun checkLocation() {
         if (originLocation == null) {
             map.locationComponent.lastKnownLocation?.run {
                 originLocation = this
+                Toast.makeText(this@MapActivity, "$originLocation checkLocation()", Toast.LENGTH_LONG).show()
             }
         }
     }
 
-    private fun getRoutes(originPoint: Point, rota: RouteObject) {
-        print(Mapbox.getAccessToken())
-        val builder = NavigationRoute.builder(this) //1
+    private fun getRoutes(rota : RouteObject) {
+
+        val originPoint = try {
+            Point.fromLngLat(originLocation!!.longitude, originLocation!!.latitude)
+
+        } catch (e: Exception) {
+            Point.fromLngLat(
+                rota.getPoi()[0].getCoordenates().getCoordinates()[1].toString().toDouble(),
+                rota.getPoi()[0].getCoordenates().getCoordinates()[0].toString().toDouble()
+            )
+        }
+
+        val builder = NavigationRoute.builder(this)
+            .profile(DirectionsCriteria.PROFILE_WALKING)//1
             .accessToken(BuildConfig.API_KEY) //2
             .origin(originPoint)
             .destination(
                 Point.fromLngLat(
-                    rota.getPoi()[rota.getPoi().size-1].getCoordenates().getCoordinates()[0].toString().toDouble(),
-                    rota.getPoi()[rota.getPoi().size-1].getCoordenates().getCoordinates()[1].toString().toDouble()
+                    rota.getPoi()[rota.getPoi().size - 1].getCoordenates().getCoordinates()[1].toString().toDouble(),
+                    rota.getPoi()[rota.getPoi().size - 1].getCoordenates().getCoordinates()[0].toString().toDouble()
                 )
             ) //4
 
-        if (originPoint == Point.fromLngLat(
-                rota.getPoi()[0].getCoordenates().getCoordinates()[0].toString().toDouble(),
-                rota.getPoi()[0].getCoordenates().getCoordinates()[1].toString().toDouble()
-            )
+        if (originPoint.latitude() == rota.getPoi()[0].getCoordenates().getCoordinates()[0].toString().toDouble() &&
+            originPoint.longitude() == rota.getPoi()[0].getCoordenates().getCoordinates()[1].toString().toDouble()
         ) {
-            for (i in 1 until rota.getPoi().size-1)
-                builder.addWaypoint(
-                    Point.fromLngLat(
-                        rota.getPoi()[i].getCoordenates().getCoordinates()[0].toString().toDouble(),
-                        rota.getPoi()[i].getCoordenates().getCoordinates()[1].toString().toDouble()
-                    )
-                )
-        } else {
-            for (i in 0 until rota.getPoi().size-1)
-                builder.addWaypoint(
-                    Point.fromLngLat(
-                        rota.getPoi()[i].getCoordenates().getCoordinates()[0].toString().toDouble(),
-                        rota.getPoi()[i].getCoordenates().getCoordinates()[1].toString().toDouble()
-                    )
-                )
-        }
 
+            for (i in 1 until rota.getPoi().size - 1) {
+                builder.addWaypoint(
+                    Point.fromLngLat(
+                        rota.getPoi()[i].getCoordenates().getCoordinates()[1].toString().toDouble(),
+                        rota.getPoi()[i].getCoordenates().getCoordinates()[0].toString().toDouble()
+                    )
+                )
+            }
+        } else {
+            for (i in 0 until rota.getPoi().size - 1) {
+                builder.addWaypoint(
+                    Point.fromLngLat(
+                        rota.getPoi()[i].getCoordenates().getCoordinates()[1].toString().toDouble(),
+                        rota.getPoi()[i].getCoordenates().getCoordinates()[0].toString().toDouble()
+                    )
+                )
+
+            }
+        }
 
 
         builder.build().getRoute(
@@ -335,27 +348,98 @@ class MapActivity : AppCompatActivity(),
                     call: Call<DirectionsResponse>,
                     response: Response<DirectionsResponse>
                 ) {
+
+                    Log.d(TAG, "Response code: " + response.code());
+                    if (response.body() == null) {
+                        Log.e(TAG, "No routes found, make sure you set the right user and access token.");
+                        return
+                    } else if (response.body()!!.routes().size < 1) {
+                        Log.e(TAG, "No routes found");
+                        return
+                    }
+
                     if (navigationMapRoute != null) {
                         navigationMapRoute?.updateRouteVisibilityTo(false)
                     } else {
-                        navigationMapRoute = NavigationMapRoute(null, mapbox, map)
+                        navigationMapRoute = NavigationMapRoute(null, mapbox, map, R.style.NavigationMapRoute)
                     }
 
                     currentRoute = response.body()?.routes()?.first()
                     if (currentRoute != null) {
                         navigationMapRoute?.addRoute(currentRoute)
-                        navigationMapRoute
                     }
 
                     btnNavigate.isEnabled = true
+                    btnNavigate.setOnClickListener {
+                        val navigationLauncherOptions = NavigationLauncherOptions.builder() //1
+                            .directionsRoute(currentRoute) //2
+                            .shouldSimulateRoute(false) //3
+                            .build()
+
+                        NavigationLauncher.startNavigation(this@MapActivity, navigationLauncherOptions) //4
+                    }
+
                 }
             })
 
+    }
+
+    private fun getMockLocation(point: Point) {
+
+
+        mLocationManager?.addTestProvider(
+            LocationManager.GPS_PROVIDER,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            android.location.Criteria.POWER_LOW,
+            android.location.Criteria.ACCURACY_FINE
+        )
+
+        val newLocation = Location(LocationManager.GPS_PROVIDER)
+
+        newLocation.latitude = point.latitude()
+        newLocation.longitude = point.longitude()
+        newLocation.accuracy = originLocation!!.accuracy
+        newLocation.time = originLocation!!.time
+        newLocation.elapsedRealtimeNanos = originLocation!!.elapsedRealtimeNanos
+        newLocation.bearing = originLocation!!.bearing
+
+        mLocationManager?.setTestProviderEnabled(LocationManager.GPS_PROVIDER, true)
+
+        mLocationManager?.setTestProviderStatus(
+            LocationManager.GPS_PROVIDER, LocationProvider.AVAILABLE,
+            null, System.currentTimeMillis()
+        )
+
+        mLocationManager?.setTestProviderLocation(LocationManager.GPS_PROVIDER, newLocation)
 
     }
 
-}
 
+    override fun onMarkerClick(marker: Marker): Boolean {
+
+        var i = 0
+        rota.getPoi().forEach {
+            if (it.getName() == marker.title)
+                getMockLocation(
+                    Point.fromLngLat(
+                        it.getCoordenates().getCoordinates()[1].toString().toDouble(),
+                        it.getCoordenates().getCoordinates()[0].toString().toDouble()
+                    )
+                )
+        }
+
+        return true
+    }
+
+
+
+}
 
 
 

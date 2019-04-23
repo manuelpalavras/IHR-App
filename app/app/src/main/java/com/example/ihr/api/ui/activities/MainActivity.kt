@@ -1,23 +1,18 @@
 package com.example.ihr.api.ui.activities
 
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
 import com.example.ihr.R
 import com.example.ihr.R.drawable.*
-
-
 import com.example.ihr.api.model.Route.RouteObject
 import com.example.ihr.api.model.ServerConnector
 import com.example.ihr.api.model.User.UserObject
 import com.example.ihr.api.ui.components.RouteComponent
-import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,121 +22,97 @@ class MainActivity : AppCompatActivity() {
     private lateinit var routeList: List<RouteObject>
     private lateinit var user: UserObject
 
+    private lateinit var exploreButton : ImageButton
+    private lateinit var favoriteButton : ImageButton
+    private lateinit var scheduleButton : ImageButton
+    private lateinit var userInfoButton : ImageButton
 
-    private lateinit var content : ConstraintLayout
-    private lateinit var explore : ImageButton
-    private lateinit var favorite : ImageButton
-    private lateinit var schedule : ImageButton
-    private lateinit var userInfo : ImageButton
-
-    // explore view
+    // exploreButton view
     private lateinit var listView : ListView
 
-    //scheduler view
-    private lateinit var scheduler : CalendarView
-    private lateinit var routeName : TextView
-    private lateinit var descriptionRoute : TextView
-    private lateinit var routeImage : ImageView
-
-    private val context = this
+    //calendarView view
+    private lateinit var calendarView : CalendarView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        content = findViewById(R.id.content)
-        explore = findViewById(R.id.explore)
-        favorite = findViewById(R.id.favorite)
-        schedule = findViewById(R.id.schedule)
-        userInfo = findViewById(R.id.user)
+
+        exploreButton = findViewById(R.id.exploreButton)
+        favoriteButton = findViewById(R.id.favoriteButton)
+        scheduleButton = findViewById(R.id.scheduleButton)
+        userInfoButton = findViewById(R.id.userButton)
         listView = findViewById(R.id.listView)
-        routeName = findViewById(R.id.routeName)
-        descriptionRoute = findViewById(R.id.descriptionRoute)
-        routeImage = findViewById(R.id.routeImage)
-        scheduler = findViewById(R.id.scheduler)
+
+        calendarView = findViewById(R.id.calendarView)
 
 
-        explore.setOnClickListener { showExplore() }
-        favorite.setOnClickListener { showFavorites() }
-        schedule.setOnClickListener { showScheduler() }
-        userInfo.setOnClickListener { showUser() }
+        exploreButton.setOnClickListener { showExplore() }
+            favoriteButton.setOnClickListener { showFavorites() }
+            scheduleButton.setOnClickListener { showScheduler() }
+            userInfoButton.setOnClickListener { showUser() }
 
-        val callRoutes: Call<List<RouteObject>> = routesClient.getAllRoutes()
-        val callUser : Call<UserObject> = userClient.getUser("manuelpalavras19@gmail.com")
+            val callRoutes: Call<List<RouteObject>> = routesClient.getAllRoutes()
+            val callUser: Call<UserObject> = userClient.getUser("manuelpalavras19@gmail.com")
 
-        callRoutes.enqueue(object : Callback<List<RouteObject>> {
-            override fun onFailure(call: Call<List<RouteObject>>, t: Throwable) {
+            callRoutes.enqueue(object : Callback<List<RouteObject>> {
+                override fun onFailure(call: Call<List<RouteObject>>, t: Throwable) {
 
                 }
 
-            override fun onResponse(call: Call<List<RouteObject>>, response: Response<List<RouteObject>>) {
-                routeList = response.body()!!
-                showExplore()
-            }
+                override fun onResponse(call: Call<List<RouteObject>>, response: Response<List<RouteObject>>) {
+                    routeList = response.body()!!
+                    showExplore()
+                }
 
 
-        })
+            })
 
-        callUser.enqueue(object : Callback<UserObject> {
-            override fun onFailure(call: Call<UserObject>, t: Throwable) {
+            callUser.enqueue(object : Callback<UserObject> {
+                override fun onFailure(call: Call<UserObject>, t: Throwable) {
 
-            }
+                }
 
-            override fun onResponse(call: Call<UserObject>, response: Response<UserObject>) {
-                user = response.body()!!
-            }
+                override fun onResponse(call: Call<UserObject>, response: Response<UserObject>) {
+                    user = response.body()!!
+                }
 
-        })
-
-
+            })
 
 
-    }
+        }
 
     private fun showFavorites() {
-        setButtonColor(favorite)
+        setButtonColor(favoriteButton)
         listView.visibility = View.INVISIBLE
-        content.visibility = View.INVISIBLE
+        calendarView.visibility = View.INVISIBLE
 
     }
 
     private fun showExplore() {
-        setButtonColor(explore)
-        content.visibility = View.INVISIBLE
+        setButtonColor(exploreButton)
+        calendarView.visibility = View.INVISIBLE
         try {
             listView.visibility = View.VISIBLE
-            val component = RouteComponent(context, R.layout.route_component, routeList)
-            listView.adapter = component
+            listView.adapter = RouteComponent(this@MainActivity, R.layout.route_component, routeList)
         } catch (e : Exception) {
 
         }
-
-
     }
 
     private fun showUser () {
-        setButtonColor(userInfo)
+        setButtonColor(userInfoButton)
         listView.visibility = View.INVISIBLE
-        content.visibility = View.INVISIBLE
+        calendarView.visibility = View.INVISIBLE
 
     }
 
     private fun showScheduler () {
-        setButtonColor(schedule)
+        setButtonColor(scheduleButton)
         listView.visibility = View.INVISIBLE
-        content.visibility = View.INVISIBLE
+        calendarView.visibility = View.VISIBLE
 
-        View.inflate(context,R.layout.calender_component,content)
-        content.visibility = View.VISIBLE
 
-        try {
-            Picasso.get().load(ServerConnector.address + "/image/Imagens/" + routeList[0].getImage())
-                .resize(150, 150).into(routeImage)
-            descriptionRoute.text = routeList[0].getDescription()
-            routeName.text = routeList[0].getName()
-        } catch (e : Exception) {
-
-        }
 
 
 
@@ -151,32 +122,32 @@ class MainActivity : AppCompatActivity() {
 
         when(button) {
 
-            explore -> {
-                explore.setImageResource(exploregreen)
-                favorite.setImageResource(heartblack)
-                schedule.setImageResource(schedulerblack)
-                userInfo.setImageResource(userblack)
+            exploreButton -> {
+                exploreButton.setImageResource(exploregreen)
+                favoriteButton.setImageResource(heartblack)
+                scheduleButton.setImageResource(schedulerblack)
+                userInfoButton.setImageResource(userblack)
             }
 
-            favorite -> {
-                explore.setImageResource(exploreblack)
-                favorite.setImageResource(heartgreen)
-                schedule.setImageResource(schedulerblack)
-                userInfo.setImageResource(userblack)
+            favoriteButton -> {
+                exploreButton.setImageResource(exploreblack)
+                favoriteButton.setImageResource(heartgreen)
+                scheduleButton.setImageResource(schedulerblack)
+                userInfoButton.setImageResource(userblack)
             }
 
-            schedule -> {
-                explore.setImageResource(exploreblack)
-                favorite.setImageResource(heartblack)
-                schedule.setImageResource(schedulergreen)
-                userInfo.setImageResource(userblack)
+            scheduleButton -> {
+                exploreButton.setImageResource(exploreblack)
+                favoriteButton.setImageResource(heartblack)
+                scheduleButton.setImageResource(schedulergreen)
+                userInfoButton.setImageResource(userblack)
             }
 
-            userInfo -> {
-                explore.setImageResource(exploreblack)
-                favorite.setImageResource(heartblack)
-                schedule.setImageResource(schedulerblack)
-                userInfo.setImageResource(usergreen)
+            userInfoButton -> {
+                exploreButton.setImageResource(exploreblack)
+                favoriteButton.setImageResource(heartblack)
+                scheduleButton.setImageResource(schedulerblack)
+                userInfoButton.setImageResource(usergreen)
             }
 
         }

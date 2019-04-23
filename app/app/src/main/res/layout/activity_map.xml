@@ -12,12 +12,12 @@
         android:background="@android:color/holo_green_dark">
 
     <Button
-            android:text="Informação Rota"
+            android:text="PERCORRER ROTA"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/routeInfo"
+            android:layout_height="wrap_content" android:id="@+id/btnNavigate"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.935"/>
+            app:layout_constraintHorizontal_bias="0.483"/>
 
     <com.mapbox.mapboxsdk.maps.MapView
             android:id="@+id/mapbox"
@@ -26,18 +26,6 @@
             mapbox:mapbox_styleUrl="@string/mapbox_style_mapbox_streets" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
-    <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btnNavigate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            app:fabSize="normal" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
-
 
 
 </android.support.constraint.ConstraintLayout>

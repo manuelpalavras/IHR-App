@@ -30,14 +30,18 @@ class RouteComponent(context: Context, resource: Int, objects: List<RouteObject>
         val view: View = inflater.inflate(R.layout.route_component, null)
 
         val routeImage: ImageView = view.findViewById(R.id.poiImage)
-        val nomeRoute: TextView = view.findViewById(R.id.nomePoi)
-        val starRoute: TextView = view.findViewById(R.id.descriptionPoi)
+        val nomeRoute: TextView = view.findViewById(R.id.poiName)
+        val starRoute: TextView = view.findViewById(R.id.poiDescription)
         val categoryRoute: TextView = view.findViewById(R.id.categoryRoute)
 
         Picasso.get().load(ServerConnector.address + "/image/Imagens/" + list?.get(position)?.getImage().toString()).resize(150, 150).into(routeImage)
         nomeRoute.text = list?.get(position)?.getName()
-        starRoute.text = list?.get(position)?.getClassification().toString()
-        categoryRoute.text = list?.get(position)?.getType().toString()
+        starRoute.text = "Classificação : " + list?.get(position)?.getClassification().toString()
+        categoryRoute.text = "Tipo : "
+
+        list?.get(position)?.getType()?.forEach {
+            categoryRoute.text = categoryRoute.text as String + it + " "
+        }
 //
         view.setOnClickListener {
             val intent = Intent(this.context, RouteActivity::class.java)

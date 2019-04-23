@@ -3,9 +3,6 @@ package com.example.ihr.api.model
 
 import com.example.ihr.api.service.RoutesClient
 import com.example.ihr.api.service.UserClient
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -38,8 +35,8 @@ class ServerConnector {
        val address: String
             get() {
 
-                val addressHome = "http://192.168.1.74:8080" // default ip address casa
-                val addressUni = "http://10.72.108.204:8080" // default ip address universidade, muda todos os dias
+                val addressHome = "http://192.168.1.6:8080" // default ip address casa
+                val addressUni = "http://10.72.108.129:8080" // default ip address universidade, muda todos os dias
 
                 return addressUni
             }
