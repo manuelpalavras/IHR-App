@@ -1,12 +1,7 @@
 package com.example.ihr.api.model
 
 
-import com.example.ihr.BuildConfig
-import com.example.ihr.api.model.Route.PoiObject
-import com.google.android.gms.location.FusedLocationProviderClient
-
-
-
+import com.example.ihr.api.model.route.PoiObject
 
 
 class MapGenerator(list: MutableList<PoiObject>) {

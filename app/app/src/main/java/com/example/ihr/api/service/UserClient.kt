@@ -1,7 +1,7 @@
 package com.example.ihr.api.service
 
 
-import com.example.ihr.api.model.User.UserObject
+import com.example.ihr.api.model.user.UserObject
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

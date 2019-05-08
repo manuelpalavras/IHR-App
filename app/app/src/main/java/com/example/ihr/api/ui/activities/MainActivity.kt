@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.*
 import com.example.ihr.R
 import com.example.ihr.R.drawable.*
-import com.example.ihr.api.model.Route.RouteObject
+import com.example.ihr.api.model.route.RouteObject
 import com.example.ihr.api.model.ServerConnector
-import com.example.ihr.api.model.User.UserObject
+import com.example.ihr.api.model.user.UserObject
 import com.example.ihr.api.ui.components.RouteComponent
 import retrofit2.Call
 import retrofit2.Callback
@@ -111,11 +111,6 @@ class MainActivity : AppCompatActivity() {
         setButtonColor(scheduleButton)
         listView.visibility = View.INVISIBLE
         calendarView.visibility = View.VISIBLE
-
-
-
-
-
     }
 
     private fun setButtonColor (button : ImageButton) {

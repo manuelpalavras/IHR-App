@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.ihr.R
-import com.example.ihr.api.model.Route.PoiObject
+import com.example.ihr.api.model.route.PoiObject
 import com.example.ihr.api.ui.activities.PoiActivity
 import java.io.Serializable
 

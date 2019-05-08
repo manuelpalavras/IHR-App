@@ -3,10 +3,9 @@ package com.example.ihr.api.ui.activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.*
 import com.example.ihr.R
-import com.example.ihr.api.model.Route.RouteObject
+import com.example.ihr.api.model.route.RouteObject
 import com.example.ihr.api.model.ServerConnector
 import com.example.ihr.api.ui.components.PoiTextComponent
 import com.squareup.picasso.Picasso

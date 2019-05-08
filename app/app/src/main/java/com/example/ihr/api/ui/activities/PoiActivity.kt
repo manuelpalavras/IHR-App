@@ -2,13 +2,12 @@ package com.example.ihr.api.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import com.example.ihr.R
-import com.example.ihr.api.model.Route.PoiObject
-import com.example.ihr.api.model.Route.RouteObject
+import com.example.ihr.api.model.route.PoiObject
+import com.example.ihr.api.model.route.RouteObject
 import com.example.ihr.api.model.ServerConnector
 import com.example.ihr.api.ui.components.RouteComponent
 import com.squareup.picasso.Picasso

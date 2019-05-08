@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.ihr.R
-import com.example.ihr.api.model.Route.RouteObject
+import com.example.ihr.api.model.route.RouteObject
 import com.example.ihr.api.ui.activities.RouteActivity
 import java.io.Serializable
 import com.example.ihr.api.model.ServerConnector

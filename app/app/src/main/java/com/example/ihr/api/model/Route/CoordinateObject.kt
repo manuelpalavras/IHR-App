@@ -1,4 +1,4 @@
-package com.example.ihr.api.model.Route
+package com.example.ihr.api.model.route
 
 import android.os.Parcel
 import android.os.Parcelable

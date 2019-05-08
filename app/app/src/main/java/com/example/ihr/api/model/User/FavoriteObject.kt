@@ -1,4 +1,4 @@
-package com.example.ihr.api.model.User
+package com.example.ihr.api.model.user
 
 import android.os.Parcel
 import android.os.Parcelable
