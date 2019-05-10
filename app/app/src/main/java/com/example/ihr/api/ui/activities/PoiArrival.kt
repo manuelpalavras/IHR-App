@@ -6,30 +6,36 @@ import android.widget.*
 import com.example.ihr.R
 import com.example.ihr.api.model.route.PoiObject
 import com.example.ihr.api.model.ServerConnector
+import com.example.ihr.api.model.routeprogress.PointChecker
+import com.mapbox.geojson.Point
 import com.squareup.picasso.Picasso
+import android.app.Activity
+import android.content.Intent
+
+
 
 class PoiArrival : AppCompatActivity() {
 
-    private lateinit var namePoI : TextView
+    private lateinit var namePoI: TextView
     private lateinit var close: Button
-    private lateinit var poiImage : ImageView
-    private lateinit var descriptionPoI : TextView
-    private lateinit var starOne : ImageButton
-    private lateinit var starTwo : ImageButton
-    private lateinit var starThree : ImageButton
-    private lateinit var starFour : ImageButton
-    private lateinit var starFive : ImageButton
+    private lateinit var poiImage: ImageView
+    private lateinit var descriptionPoI: TextView
+    private lateinit var starOne: ImageButton
+    private lateinit var starTwo: ImageButton
+    private lateinit var starThree: ImageButton
+    private lateinit var starFour: ImageButton
+    private lateinit var starFive: ImageButton
 
-    private lateinit var commentary : EditText
+    private lateinit var commentary: EditText
+    private lateinit var poiArrived: PoiObject
 
-    private var ratingBar : Int = 0
-    private var text : String = ""
+    private var ratingBar: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poi_arrival)
 
-        val poiArrived = intent.extras.getParcelable<PoiObject>("poi")
+        poiArrived = intent.extras.getParcelable("poi")
 
         close = findViewById(R.id.close)
         namePoI = findViewById(R.id.namePoI)
@@ -56,18 +62,21 @@ class PoiArrival : AppCompatActivity() {
         starFour.setOnClickListener { starClicked(starFour) }
         starFive.setOnClickListener { starClicked(starFive) }
         close.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra("result", PointChecker(poiArrived.getName(),commentary.text.toString(),ratingBar))
+            setResult(Activity.RESULT_OK, intent)
             finish()
         }
 
-        namePoI.text = poiArrived.getImage()
+        namePoI.text = poiArrived.getName()
         Picasso.get().load(ServerConnector.address + "/image/Imagens/" + poiArrived.getImage()).into(poiImage)
         descriptionPoI.text = poiArrived.getDescription()
 
     }
 
-    private fun starClicked (button : ImageButton) {
+    private fun starClicked(button: ImageButton) {
 
-        when(button) {
+        when (button) {
 
             starOne -> {
                 starOne.setImageResource(R.drawable.heartgreen)
@@ -117,14 +126,4 @@ class PoiArrival : AppCompatActivity() {
 
     }
 
-    override fun finish() {
-        super.finish()
-
-        text = commentary.text.toString()
-
-        Toast.makeText(this@PoiArrival,ratingBar,Toast.LENGTH_SHORT).show()
-        Toast.makeText(this@PoiArrival,text,Toast.LENGTH_SHORT).show()
-
-
-    }
 }

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.support.v4.content.ContextCompat.startActivity
 import com.example.ihr.api.model.route.RouteObject
 import com.mapbox.api.directions.v5.models.DirectionsRoute
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncherOptions
@@ -31,7 +32,7 @@ class NavigationLauncher {
             bundle.putParcelable("rota", rota)
             navigationActivity.putExtras(bundle)
             storeInitialMapPosition(options, navigationActivity)
-            activity.startActivity(navigationActivity)
+            activity.baseContext.startActivity(navigationActivity)
         }
 
         fun extractRoute(context: Context): DirectionsRoute {

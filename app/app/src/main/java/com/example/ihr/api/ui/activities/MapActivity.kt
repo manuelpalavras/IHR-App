@@ -366,7 +366,7 @@ class MapActivity : AppCompatActivity(),
 
                         //4
 
-                        com.example.ihr.api.ui.activities.NavigationLauncher.startNavigation(rota,this@MapActivity, navigationLauncherOptions)
+                        NavigationLauncher.startNavigation(rota,this@MapActivity, navigationLauncherOptions)
                     }
 
                 }

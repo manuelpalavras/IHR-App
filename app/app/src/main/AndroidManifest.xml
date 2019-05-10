@@ -27,6 +27,7 @@
         </activity>
         <activity
                 android:name=".api.ui.activities.NavigationActivity"
+                class = ".api.ui.activities.NavigationActivity"
                 android:label="NavigationActivity"
                 android:theme="@style/AppTheme.NoActionBar.NoActionBar">
         </activity>

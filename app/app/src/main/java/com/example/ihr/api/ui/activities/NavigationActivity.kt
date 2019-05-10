@@ -7,12 +7,16 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
+import android.util.Log
+import android.widget.Toast
 import com.example.ihr.R
 import com.example.ihr.api.model.route.RouteObject
+import com.example.ihr.api.model.routeprogress.PointChecker
+import com.example.ihr.api.model.routeprogress.RouteProgressObject
 import com.mapbox.api.directions.v5.DirectionsCriteria
 import com.mapbox.api.directions.v5.models.DirectionsRoute
 import com.mapbox.geojson.Point
+import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.camera.CameraPosition
 import com.mapbox.services.android.navigation.ui.v5.NavigationView
 import com.mapbox.services.android.navigation.ui.v5.NavigationViewOptions
@@ -22,6 +26,8 @@ import com.mapbox.services.android.navigation.v5.navigation.MapboxNavigationOpti
 import com.mapbox.services.android.navigation.v5.navigation.NavigationConstants
 import com.mapbox.services.android.navigation.v5.routeprogress.ProgressChangeListener
 import com.mapbox.services.android.navigation.v5.routeprogress.RouteProgress
+import com.example.ihr.R.layout.activity_navigation
+import org.json.JSONObject
 
 
 class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, NavigationListener, ProgressChangeListener {
@@ -29,17 +35,22 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
     private var navigationView: NavigationView? = null
     private var counterPoI = 0
     private var counterDistance = 0.0
+    private var counterRouteDuration = 0.0
+
+
     private lateinit var rota: RouteObject
 
     private lateinit var directionsRoute: DirectionsRoute
+    private lateinit var routeProgressObject: RouteProgressObject
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_navigation)
+        setContentView(activity_navigation)
         navigationView = findViewById(R.id.navigationView)
         navigationView!!.onCreate(savedInstanceState)
         rota = intent.extras.getParcelable("rota")
+
 
         rota.getPoi().forEach {
             val point = Point.fromLngLat(
@@ -49,8 +60,8 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
             navigationView!!.addMarker(point)
         }
 
-
         initialize()
+
     }
 
     public override fun onStart() {
@@ -88,6 +99,7 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
     public override fun onPause() {
         super.onPause()
         navigationView!!.onPause()
+
     }
 
     public override fun onStop() {
@@ -100,15 +112,12 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
         navigationView!!.onDestroy()
     }
 
-
-
     override fun onNavigationReady(isRunning: Boolean) {
         val options = NavigationViewOptions.builder()
         options.navigationListener(this@NavigationActivity).progressChangeListener(this@NavigationActivity)
         extractRoute(options)
         extractConfiguration(options)
         options.navigationOptions(MapboxNavigationOptions.builder().build())
-
         navigationView!!.startNavigation(options.build())
     }
 
@@ -136,6 +145,7 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
     private fun extractRoute(options: NavigationViewOptions.Builder) {
         directionsRoute = NavigationLauncher.extractRoute(this)
         options.directionsRoute(directionsRoute)
+        routeProgressObject = RouteProgressObject(rota, directionsRoute.routeOptions()!!.coordinates()[0])
     }
 
     private fun extractConfiguration(options: NavigationViewOptions.Builder) {
@@ -159,22 +169,39 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
     }
 
     override fun onProgressChange(location: Location?, routeProgress: RouteProgress?) {
+        if (routeProgressObject.getDuration() == 0.0 && routeProgressObject.getDistance() == 0.0) {
+            counterRouteDuration = routeProgress!!.durationRemaining()
+            routeProgressObject.setDuration(routeProgress!!.durationRemaining() / 60 / 2)
+            routeProgressObject.setDistance(routeProgress.distanceRemaining())
+            routeProgressObject.addPointChecker(
+                PointChecker(
+                    "Ponto inicial",PointChecker().getCurrentTime(),
+                    Point.fromLngLat(location!!.longitude, location.latitude)
+                )
+            )
+        }
+        counterDistance = if (counterPoI != 0) {
+            routeProgress!!.distanceTraveled() - counterDistance
+        } else {
+            routeProgress!!.distanceTraveled()
+        }
+
 
         if (routeProgress!!.legIndex() == counterPoI + 1 && calculateDistance(
                 rota.getPoi()[counterPoI].getCoordenates().getCoordinates()[0].toString().toDouble(),
                 rota.getPoi()[counterPoI].getCoordenates().getCoordinates()[1].toString().toDouble(),
                 location!!.latitude, location.longitude
-            ).toDouble() < routeProgress!!.distanceTraveled() + 100
-        ) {
+            ).toDouble() < routeProgress!!.distanceTraveled() + 100 ||
+            routeProgress.distanceRemaining() <= 50.0 && counterPoI < rota.getPoi().size) {
+
+            onPause()
             val intent = Intent(this@NavigationActivity, PoiArrival::class.java)
             val bundle = Bundle()
             bundle.putParcelable("poi", rota.getPoi()[counterPoI])
             intent.putExtras(bundle)
-            counterPoI++
-            if(counterPoI == 0)
-            counterDistance += routeProgress.distanceTraveled()
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
+
 
     }
 
@@ -187,12 +214,40 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
         ) + 100
     }
 
-    fun calculateDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double): Float {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == RESULT_OK) {
+            counterPoI++
+            val pointChecker = data!!.extras.getParcelable<PointChecker>("result")
+            routeProgressObject.addPointChecker(pointChecker)
+            routeProgressObject.getPointCheckerByIndex(counterPoI).addDuration(counterRouteDuration)
+            Toast.makeText(
+                this@NavigationActivity,
+                routeProgressObject.getPointCheckerByIndex(counterPoI).toString(),
+                Toast.LENGTH_LONG
+            ).show()
+            System.out.printf(" \n\n\n JSON GERADO \n" + routeProgressObject.toJSON().toString() + "\n\n")
+            if(counterPoI == rota.getPoi().size)
+                System.out.printf(" \n\n\n JSON GERADO \n" + routeProgressObject.toJSON().toString() + "\n\n")
+                else
+                onResume()
+        }
+    }
+
+
+    private fun calculateDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double): Float {
         val results = FloatArray(1)
         Location.distanceBetween(lat1, lng1, lat2, lng2, results)
         // distance in meter
         return results[0]
     }
+
+    fun getRouteProgressObject(): RouteProgressObject {
+        return routeProgressObject
+    }
+
+
 
 
 }
