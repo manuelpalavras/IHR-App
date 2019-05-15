@@ -21,6 +21,7 @@ class PointChecker() : Parcelable {
         this.duration = duration
     }
 
+
     constructor(poiName: String, commentary: String, rating: Int) : this() {
         this.poiName = poiName
         this.commentary = commentary
@@ -56,6 +57,7 @@ class PointChecker() : Parcelable {
         parcel.writeInt(rating)
         parcel.writeDouble(duration)
         parcel.writeString(time)
+        parcel.writeString(point.toJson())
     }
 
     override fun describeContents(): Int {
@@ -78,6 +80,7 @@ class PointChecker() : Parcelable {
         rating = parcel.readInt()
         duration = parcel.readDouble()
         time = parcel.readString()
+        point = Point.fromJson(parcel.readString())
     }
 
     fun getName(): String {

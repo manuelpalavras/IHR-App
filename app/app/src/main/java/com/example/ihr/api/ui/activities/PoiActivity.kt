@@ -35,7 +35,7 @@ class PoiActivity : AppCompatActivity() {
 
         poiSelected = intent.extras.getParcelable("poi")
 
-        poiImage = findViewById(R.id.poiImage)
+        poiImage = findViewById(R.id.routeImage)
         poiName = findViewById(R.id.poiName)
         descriptionPoi = findViewById(R.id.poiDescription)
         routesFromPoi = findViewById(R.id.routesFromPoI)

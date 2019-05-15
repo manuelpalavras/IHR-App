@@ -29,7 +29,7 @@ class RouteComponent(context: Context, resource: Int, objects: List<RouteObject>
 
         val view: View = inflater.inflate(R.layout.route_component, null)
 
-        val routeImage: ImageView = view.findViewById(R.id.poiImage)
+        val routeImage: ImageView = view.findViewById(R.id.routeImage)
         val nomeRoute: TextView = view.findViewById(R.id.poiName)
         val starRoute: TextView = view.findViewById(R.id.poiDescription)
         val categoryRoute: TextView = view.findViewById(R.id.categoryRoute)

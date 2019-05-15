@@ -7,29 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1e83574-592d-43bd-8f0f-0159139e776a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MapActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteRating.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route_rating.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/mapquest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/mapquest.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/CoordinateObject.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/PoiObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/Route/PoiObject.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/RouteProgressJsonExamaple.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/RouteProgressJsonExamaple.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/RoutesClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/RoutesClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RoteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/fragments/RouteFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/fragments/RouteFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_rote.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/PointChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/PointChecker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/RouteProgressObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/RouteProgressObject.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/UserClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/UserClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MapActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationLauncher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationLauncher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiArrival.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiArrival.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/components/RouteComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/components/RouteComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi_arrival.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi_arrival.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/route_component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/route_component.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/express/models/databaseUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/models/databaseUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/express/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/routes/userRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +86,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="citiesRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -88,25 +95,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <file leaf-file-name="userRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="275">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="databaseUser.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collection.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/mongodb/lib/collection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27115">
+              <caret line="1595" column="46" selection-start-line="1595" selection-start-column="46" selection-end-line="1595" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbConn.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rotas.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -121,11 +155,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="databaseRoute.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+            <state relative-caret-position="782">
+              <caret line="122" column="44" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+              <folding>
+                <element signature="e#1017#3262#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +176,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/servidor/express/routes/mainRouter.js" />
-        <option value="$PROJECT_DIR$/servidor/express/server.js" />
         <option value="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/activities/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/fragments/RouteFragment.kt" />
@@ -151,8 +187,11 @@
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/RoutesClient.kt" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/UserClient.kt" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" />
-        <option value="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" />
         <option value="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" />
+        <option value="$PROJECT_DIR$/servidor/express/server.js" />
+        <option value="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" />
+        <option value="$PROJECT_DIR$/servidor/express/routes/userRouter.js" />
+        <option value="$PROJECT_DIR$/servidor/express/models/databaseUser.js" />
       </list>
     </option>
   </component>
@@ -177,11 +216,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -211,10 +249,18 @@
               <item name="servidor" type="462c0819:PsiDirectoryNode" />
               <item name="express" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IHR-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IHR-App" type="462c0819:PsiDirectoryNode" />
+              <item name="servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="express" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,6 +294,7 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="$PROJECT_DIR$/servidor/express/server.js" />
+    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/servidor/express" />
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -300,7 +347,11 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/servidor/express" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -317,39 +368,44 @@
       <workItem from="1552844558643" duration="7889000" />
       <workItem from="1552904434182" duration="90000" />
       <workItem from="1553190975244" duration="4055000" />
+      <workItem from="1557766189424" duration="1345000" />
+      <workItem from="1557813914511" duration="14168000" />
+      <workItem from="1557916019580" duration="3684000" />
+      <workItem from="1557930942593" duration="1829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18764000" />
+    <option name="totallyTimeSpent" value="39790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24776785" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24743778" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290938" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3990461" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Messages" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,32 +414,196 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
+          <line>23</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>31</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/servidor/express/routes/mainRouter.js" />
-    <entry file="file://$PROJECT_DIR$/servidor/express/models/dataBase.js" />
     <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/com/example/tiagoferreira/ihr/MainActivity.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/activities/MainActivity.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/fragments/RouteFragment.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/AppointmentObject.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/AvailabilityObject.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/FavoriteObject.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/UserObject.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/RouteObject.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/ServerConnector.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/RoutesClient.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/UserClient.kt" />
-    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" />
-    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseCity.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/express/lib/response.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="413" column="35" lean-forward="true" selection-start-line="413" selection-start-column="35" selection-end-line="413" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="122" column="44" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+          <folding>
+            <element signature="e#1017#3262#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" column="73" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="73" />
+          <folding>
+            <element signature="e#1017#3262#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -423,8 +643,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="629">
           <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/mainRouter.js" />
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/dataBase.js" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/com/example/tiagoferreira/ihr/MainActivity.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/activities/MainActivity.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/ui/fragments/RouteFragment.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/AppointmentObject.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/AvailabilityObject.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/FavoriteObject.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/User/UserObject.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/RouteObject.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/model/ServerConnector.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/RoutesClient.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/UserClient.kt" />
+    <entry file="file://$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" />
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseCity.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="413" column="35" lean-forward="true" selection-start-line="413" selection-start-column="35" selection-end-line="413" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="122" column="44" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+          <folding>
+            <element signature="e#1017#3262#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/mongodb/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/mongodb/lib/operations/collection_ops.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1457" column="2" selection-start-line="1457" selection-start-column="2" selection-end-line="1457" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/mongodb/lib/collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27115">
+          <caret line="1595" column="46" selection-start-line="1595" selection-start-column="46" selection-end-line="1595" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
         </state>
       </provider>
     </entry>

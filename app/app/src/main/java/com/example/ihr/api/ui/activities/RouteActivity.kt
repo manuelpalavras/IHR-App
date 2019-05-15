@@ -24,7 +24,7 @@ class RouteActivity : AppCompatActivity() {
 
         val buttonToMap : Button = findViewById(R.id.button)
         val imageRoute: ImageView = findViewById(R.id.imageRoute)
-        val descriptionRoute: TextView = findViewById(R.id.descriptionRoute)
+        val descriptionRoute: TextView = findViewById(R.id.statsRoute)
         val nameRoute: TextView = findViewById(R.id.nameRoute)
         val classificationRoute: TextView = findViewById(R.id.classificationRoute)
         val durationRoute: TextView = findViewById(R.id.durationRoute)

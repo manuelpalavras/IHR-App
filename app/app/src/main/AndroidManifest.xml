@@ -18,6 +18,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name=".api.ui.activities.RouteRating"
+                android:label="@string/title_activity_route_rating"
+                android:theme="@style/AppTheme.NoActionBar.NoActionBar">
+        </activity>
         <activity android:name=".api.ui.activities.PoiArrival">
         </activity>
         <activity
@@ -27,7 +32,7 @@
         </activity>
         <activity
                 android:name=".api.ui.activities.NavigationActivity"
-                class = ".api.ui.activities.NavigationActivity"
+                class=".api.ui.activities.NavigationActivity"
                 android:label="NavigationActivity"
                 android:theme="@style/AppTheme.NoActionBar.NoActionBar">
         </activity>

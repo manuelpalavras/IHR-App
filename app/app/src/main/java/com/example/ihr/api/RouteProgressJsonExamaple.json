@@ -1,20 +1,49 @@
-
-
 {
-  "Rota":"Assalto ao Castelo!",
-  "HoraComeco":"10/05/2019 13:50:41",
-  "Duracao":80.42565781871478,
-  "Distancia":13636.3986328125,
-  "Classificacao":0,
-  "Pontos de Interesse":
-  [{
-    "Nome":"Ponto Inicial",
-    "Comentario":"",
-    "coordenadas":
-    {"type":"Point",
-      "coordinates":[38.8045721,-9.184011]
+  "Rota": "Assalto ao Castelo!",
+  "HoraComeco": "14/05/2019 16:23:40",
+  "Duracao": 21.160164943337442,
+  "Distancia": 3580,
+  "Classificacao": 4,
+  "Pontos de Interesse": [
+    {
+      "Nome": "Ponto inicial",
+      "Comentario": "",
+      "coordenadas": {
+        "type": "Point",
+        "coordinates": [38.7073403, -9.1525321]
+      },
+      "Classificacao": 0,
+      "Hora": "14/05/2019 16:18:30"
     },
-    "Classificacao":0,
-    "Hora":"10/05/2019 13:31:26",
-  }, {"Nome":"Ponto inicial","Comentario":"","coordenadas":{"type":"Point","coordinates":"[2.2250738585072014E-308,2.2250738585072014E-308]"},"Classificacao":0,"Hora":"10/05/2019 13:31:27"}, {"Nome":"Martim Moniz","Comentario":"","Classificacao":4,"Hora":"10/05/2019 13:48:51"}, {"Nome":"Rossio","Comentario":"","Classificacao":4,"Hora":"10/05/2019 13:48:53"}, {"Nome":"Castelo de São Jorge","Comentario":"","Classificacao":4,"Hora":"10/05/2019 13:50:41"}]"
-  }}
+    {
+      "Nome": "Rossio",
+      "Comentario": "",
+      "coordenadas": {
+        "type": "Point",
+        "coordinates": [38.713823, -9.13939]
+      },
+      "Classificacao": 4,
+      "Hora": "14/05/2019 16:21:11"
+    },
+    {
+      "Nome": "Martim Moniz",
+      "Comentario": "",
+      "coordenadas": {
+        "type": "Point",
+        "coordinates": [38.715935, -9.136358]
+      },
+      "Classificacao": 4,
+      "Hora": "14/05/2019 16:21:51"
+    },
+    {
+      "Nome": "Castelo de São Jorge",
+      "Comentario": "",
+      "coordenadas": {
+        "type": "Point",
+        "coordinates": [38.712629, -9.132962]
+      },
+      "Classificacao": 3,
+      "Hora": "14/05/2019 16:23:38"
+    }
+  ]
+}

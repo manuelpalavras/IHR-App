@@ -118,7 +118,7 @@ exports.getFilteredRoutes = function (nome, tipos, classificacao, dificuldade, c
 
         })
     })
-}
+};
 
 exports.getRoutesOfPoI = function (PoI, cb) {
 
@@ -132,7 +132,3 @@ exports.getRoutesOfPoI = function (PoI, cb) {
         })
     })
 };
-
-exports.getImage = function (img, cb) {
-
-}

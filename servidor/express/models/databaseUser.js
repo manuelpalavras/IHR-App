@@ -17,3 +17,21 @@ exports.getUser = function (email, cb) {
     })
 
 };
+
+exports.updateHistoryRoute = function (json, email, cb) {
+
+    JSON.parse(json["Pontos de Interesse"]);
+    JSON.parse(json["Pontos de Interesse"]["coordenadas"]["coordinates"]);
+
+
+    mongo((db) => {
+        db.collection('Users').findOneAndUpdate({Email: email}, {$push: {HistoricoRotas: json}}, {new: true}, (err, res) => {
+            if (err || res == null)
+                cb(err);
+            else {
+                console.log("updated")
+            }
+        })
+    })
+
+};

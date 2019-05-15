@@ -72,7 +72,7 @@
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/descriptionRoute"
+            android:id="@+id/statsRoute"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textAlignment="viewStart"
             android:text="dsafsadf"
             android:layout_marginStart="8dp"
@@ -89,7 +89,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionRoute" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/statsRoute" android:layout_marginTop="8dp"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"

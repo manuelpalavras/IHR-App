@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.location.Location
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v4.content.ContextCompat.startActivity
@@ -16,7 +17,7 @@ class NavigationLauncher {
 
     companion object {
 
-        fun startNavigation(rota : RouteObject, activity: Activity, options: NavigationLauncherOptions) {
+        fun startNavigation(rota : RouteObject, activity: Activity, options: NavigationLauncherOptions, origin : Location?) {
             val preferences = PreferenceManager.getDefaultSharedPreferences(activity)
             val editor = preferences.edit()
 
@@ -30,6 +31,7 @@ class NavigationLauncher {
             val navigationActivity = Intent(activity, NavigationActivity::class.java)
             val bundle = Bundle()
             bundle.putParcelable("rota", rota)
+            bundle.putParcelable("location",origin)
             navigationActivity.putExtras(bundle)
             storeInitialMapPosition(options, navigationActivity)
             activity.baseContext.startActivity(navigationActivity)

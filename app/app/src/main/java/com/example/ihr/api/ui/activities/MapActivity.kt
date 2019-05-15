@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.example.ihr.BuildConfig
 import com.example.ihr.api.model.route.RouteObject
+import com.example.ihr.api.model.routeprogress.RouteProgressObject
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
@@ -222,7 +223,6 @@ class MapActivity : AppCompatActivity(),
         locationEngine?.addLocationEngineListener(this)
 
 
-
         val lastLocation = locationEngine?.lastLocation
         if (lastLocation != null) {
             originLocation = lastLocation
@@ -366,7 +366,12 @@ class MapActivity : AppCompatActivity(),
 
                         //4
 
-                        NavigationLauncher.startNavigation(rota,this@MapActivity, navigationLauncherOptions)
+                        NavigationLauncher.startNavigation(
+                            rota,
+                            this@MapActivity,
+                            navigationLauncherOptions,
+                            originLocation
+                        )
                     }
 
                 }
@@ -376,7 +381,6 @@ class MapActivity : AppCompatActivity(),
 
 
     //---------------------------------
-
 
 
     private fun startNavigation() {
@@ -395,10 +399,6 @@ class MapActivity : AppCompatActivity(),
         return true
     }
 
-
-    private fun circleCalc(xCentre: Double, yCentre: Double, xUser: Double, yUser: Double): Boolean {
-        return Math.pow((xUser - xCentre), 2.0) + Math.pow((yUser - yCentre), 2.0) <= 0
-    }
 
 }
 
