@@ -7,29 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1e83574-592d-43bd-8f0f-0159139e776a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteRating.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route_rating.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/RouteProgressJsonExamaple.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/RouteProgressJsonExamaple.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/PointChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/PointChecker.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/RouteProgressObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/routeprogress/RouteProgressObject.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/UserClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/service/UserClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/MapActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationLauncher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/NavigationLauncher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiArrival.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/PoiArrival.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/components/RouteComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/components/RouteComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi_arrival.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_poi_arrival.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/activity_route.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/layout/route_component.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/layout/route_component.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteRating.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/ui/activities/RouteRating.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servidor/express/models/databaseUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/models/databaseUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servidor/express/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/servidor/express/routes/userRouter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -98,7 +84,7 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="493">
               <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
             </state>
           </provider>
@@ -107,35 +93,26 @@
       <file leaf-file-name="userRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="357">
               <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="databaseUser.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="databaseUser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+            <state relative-caret-position="326">
+              <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servidor/express/node_modules/mongodb/lib/collection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27115">
-              <caret line="1595" column="46" selection-start-line="1595" selection-start-column="46" selection-end-line="1595" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbConn.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbConn.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="170">
+              <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -158,11 +135,20 @@
       <file leaf-file-name="databaseRoute.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="122" column="44" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+            <state relative-caret-position="312">
+              <caret line="141" column="62" lean-forward="true" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
               <folding>
                 <element signature="e#1017#3262#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routesRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="56" column="4" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -187,11 +173,11 @@
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/RoutesClient.kt" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/ihr/api/service/UserClient.kt" />
         <option value="$PROJECT_DIR$/app/app/src/main/java/com/example/ihr/api/model/ServerConnector.kt" />
-        <option value="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" />
         <option value="$PROJECT_DIR$/servidor/express/server.js" />
-        <option value="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" />
         <option value="$PROJECT_DIR$/servidor/express/routes/userRouter.js" />
         <option value="$PROJECT_DIR$/servidor/express/models/databaseUser.js" />
+        <option value="$PROJECT_DIR$/servidor/express/models/databaseRoute.js" />
+        <option value="$PROJECT_DIR$/servidor/express/routes/routesRouter.js" />
       </list>
     </option>
   </component>
@@ -220,17 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="IHR-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +230,17 @@
               <item name="servidor" type="462c0819:PsiDirectoryNode" />
               <item name="express" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="IHR-App" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -371,16 +357,17 @@
       <workItem from="1557766189424" duration="1345000" />
       <workItem from="1557813914511" duration="14168000" />
       <workItem from="1557916019580" duration="3684000" />
-      <workItem from="1557930942593" duration="1829000" />
+      <workItem from="1557930942593" duration="8658000" />
+      <workItem from="1557995985228" duration="4305000" />
+      <workItem from="1558366217074" duration="511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39790000" />
+    <option name="totallyTimeSpent" value="51435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24743778" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -391,7 +378,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3990461" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -418,42 +405,87 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
-          <line>21</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
-          <line>23</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
-          <line>27</line>
+          <line>39</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
-          <line>28</line>
+          <line>40</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
-          <line>31</line>
+          <line>43</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
-          <line>29</line>
+          <line>41</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>23</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/routes/userRouter.js</url>
+          <line>21</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>38</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>26</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>27</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>29</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>30</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>31</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>32</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/servidor/express/models/databaseUser.js</url>
+          <line>34</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -673,47 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding>
-            <element signature="e#428#1455#0" />
-            <element signature="e#1732#8427#0" />
-            <element signature="e#8428#11891#0" />
-            <element signature="e#11892#15235#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/routes/citiesRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="122" column="44" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
-          <folding>
-            <element signature="e#1017#3262#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,22 +731,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="493">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/routes/userRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="357">
           <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/Rotas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#428#1455#0" />
+            <element signature="e#1732#8427#0" />
+            <element signature="e#8428#11891#0" />
+            <element signature="e#11892#15235#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseUser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
+        <state relative-caret-position="326">
+          <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/databaseRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="141" column="62" lean-forward="true" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
+          <folding>
+            <element signature="e#1017#3262#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/routes/routesRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="56" column="4" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servidor/express/models/dbConn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
         </state>
       </provider>
     </entry>

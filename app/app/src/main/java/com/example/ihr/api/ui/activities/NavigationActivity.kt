@@ -253,8 +253,8 @@ class NavigationActivity : AppCompatActivity(), OnNavigationReadyCallback, Navig
         val intent = Intent(this@NavigationActivity, RouteRating::class.java)
         val bundle = Bundle()
         bundle.putParcelable("rota", routeProgressObject)
+        bundle.putParcelable("route", rota)
         intent.putExtras(bundle)
-        intent.putExtra("imagem", rota.getImage())
         startActivity(intent)
         finishNavigation()
     }

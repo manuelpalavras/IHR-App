@@ -35,7 +35,7 @@ class ServerConnector {
        val address: String
             get() {
 
-                val addressHome = "http://192.168.1.2:8080" // default ip address casa
+                val addressHome = "http://192.168.1.5:8080" // default ip address casa
                 val addressUni = "http://10.72.122.231:8080" // default ip address universidade, muda todos os dias
 
                 return addressUni

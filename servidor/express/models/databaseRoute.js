@@ -43,14 +43,13 @@ exports.getRoutes = function (cb) {
 };
 
 exports.getFilteredRoutes = function (nome, tipos, classificacao, dificuldade, cb) {
-    let queryOr=[];
-    queryOr[0]={ Cidade: nome }
-    queryOr[1]={PoI: {$elemMatch: {Nome: nome}}}
+    let queryOr = [];
+    queryOr[0] = {Cidade: nome}
+    queryOr[1] = {PoI: {$elemMatch: {Nome: nome}}}
 
     for (let i = 0; i < classificacao.length; i++) {
-        queryOr.push( {Classificacao:{$gte:classificacao[i+2] - 0.5, $lte: classificacao[i+2] - (-0.4)}})
+        queryOr.push({Classificacao: {$gte: classificacao[i + 2] - 0.5, $lte: classificacao[i + 2] - (-0.4)}})
     }
-
 
 
     mongo((db) => {
@@ -58,51 +57,51 @@ exports.getFilteredRoutes = function (nome, tipos, classificacao, dificuldade, c
         let queryS
         if (tipos[0] === "null" && classificacao[0] === "null" && dificuldade[0] === "null") {
             queryS = {
-                $or:[ { Cidade: nome },  {PoI: {$elemMatch: {Nome: nome}}} ]
+                $or: [{Cidade: nome}, {PoI: {$elemMatch: {Nome: nome}}}]
             };
         }
         else if (tipos[0] === "null" && classificacao[0] === "null") {
             queryS = {
-                $or:[ { Cidade: nome },  {PoI: {$elemMatch: {Nome: nome}}} ],
+                $or: [{Cidade: nome}, {PoI: {$elemMatch: {Nome: nome}}}],
                 Dificuldade: {$in: dificuldade}
             };
         }
         else if (classificacao[0] === "null" && dificuldade[0] === "null") {
             queryS = {
-                $or:[ { Cidade: nome },  {PoI: {$elemMatch: {Nome: nome}}} ],
+                $or: [{Cidade: nome}, {PoI: {$elemMatch: {Nome: nome}}}],
                 Tipo: {$in: tipos}
             };
         }
         else if (tipos[0] === "null" && dificuldade[0] === "null") {
             queryS = {
-                $or:queryOr
+                $or: queryOr
             };
 
         }
         else if (tipos[0] === "null") {
             queryS = {
                 Dificuldade: {$in: dificuldade},
-                $or:queryOr
+                $or: queryOr
             };
         }
         else if (dificuldade[0] === "null") {
             queryS = {
                 Tipo: {$in: tipos},
-                $or:queryOr
+                $or: queryOr
             };
         }
         else if (classificacao[0] === "null") {
             queryS = {
-                $or:[ { Cidade: nome },  {PoI: {$elemMatch: {Nome: nome}}} ],
+                $or: [{Cidade: nome}, {PoI: {$elemMatch: {Nome: nome}}}],
                 Tipo: {$in: tipos},
                 Dificuldade: {$in: dificuldade}
             };
         }
-        else{
+        else {
             queryS = {
                 Tipo: {$in: tipos},
                 Dificuldade: {$in: dificuldade},
-                $or:queryOr
+                $or: queryOr
             };
         }
 
@@ -132,3 +131,31 @@ exports.getRoutesOfPoI = function (PoI, cb) {
         })
     })
 };
+
+
+exports.setNewRouteRating = function (name, oldRating, newRating, numberOfRatings, cb) {
+
+    let numberNewRating = numberOfRatings + 1;
+    let newRatingCalc = Math.round(((oldRating * numberOfRatings + newRating) / numberNewRating) * 10) / 10;
+
+    mongo((db) => {
+        db.collection('Rotas').findOneAndUpdate({Nome: name}, {
+                $set: {
+                    Classificacao: newRatingCalc,
+                    Avaliacoes: numberNewRating
+                }
+            }, {new: true}, (err, res) => {
+                if (err || res == null) {
+                    console.log(err)
+                    cb(err)
+                }
+                else {
+                    console.log("Route Rating updated")
+                    cb(err, true)
+                }
+            }
+        )
+
+    })
+};
+

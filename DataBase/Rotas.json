@@ -1,55 +1,55 @@
-{ 
-    "_id" : ObjectId("5beed8f539fc861a883b74a2"), 
-    "Nome" : "Assalto ao Castelo!", 
-    "Descricao" : "O Castelo de São Jorge ou Paço da Alcáçova ou Paço de São Jorge localiza-se na freguesia de Santa Maria Maior, na cidade e concelho de Lisboa, em Portugal. O nome actual deriva da devoção do castelo a São Jorge, santo padroeiro dos cavaleiros e das cruzadas, feita por ordem de D. João I no século XIV.", 
-    "PoI" : [
+{
+    "_id" : ObjectId("5beed8f539fc861a883b74a2"),
+    "Nome" : "Assalto ao Castelo!",
+    "Descricao" : "O Castelo de São Jorge ou Paço da Alcáçova ou Paço de São Jorge localiza-se na freguesia de Santa Maria Maior, na cidade e concelho de Lisboa, em Portugal. O nome actual deriva da devoção do castelo a São Jorge, santo padroeiro dos cavaleiros e das cruzadas, feita por ordem de D. João I no século XIV.",
+    "PoI" : [ 
         {
-            "Nome" : "Rossio", 
-            "Descricao" : "É uma praça grande", 
-            "Img" : "rossio.jpg", 
+            "Nome" : "Rossio",
+            "Descricao" : "A Praça de D. Pedro IV, mais conhecida por Rossio (na grafia antiga Rocio), é uma praça da Baixa de Lisboa, tem constituído um dos centros nevrálgicos da cidade.",
+            "Img" : "rossio.jpg",
             "coordenadas" : {
-                "type" : "Point", 
-                "coordinates" : [
+                "type" : "Point",
+                "coordinates" : [ 
                     38.713823, 
                     -9.13939
                 ]
             }
         }, 
         {
-            "Nome" : "Martim Moniz", 
-            "Descricao" : "Viva o indiano", 
-            "Img" : "martimmoniz.jpg", 
+            "Nome" : "Martim Moniz",
+            "Descricao" : "Zona comercial de Bairro",
+            "Img" : "martimmoniz.jpg",
             "coordenadas" : {
-                "type" : "Point", 
-                "coordinates" : [
+                "type" : "Point",
+                "coordinates" : [ 
                     38.715935, 
                     -9.136358
                 ]
             }
         }, 
         {
-            "Nome" : "Castelo de São Jorge", 
-            "Descricao" : "O Topo de lisboa", 
-            "Img" : "castelodesaojorge.jpg", 
+            "Nome" : "Castelo de São Jorge",
+            "Descricao" : "O Topo de lisboa",
+            "Img" : "castelodesaojorge.jpg",
             "coordenadas" : {
-                "type" : "Point", 
-                "coordinates" : [
+                "type" : "Point",
+                "coordinates" : [ 
                     38.712629, 
                     -9.132962
                 ]
             }
         }
-    ], 
-    "Tipo" : [
+    ],
+    "Tipo" : [ 
         "Historica"
-    ], 
-    "imagem" : "castelodesaojorge.jpg", 
-    "Classificacao" : 4.7, 
-    "Avaliacoes" : "439", 
-    "Dificuldade" : "Media", 
-    "Duracao" : "2:00", 
-    "Deficientes" : false, 
-    "Pais" : "Portugal", 
+    ],
+    "imagem" : "castelodesaojorge.jpg",
+    "Classificacao" : 4.7,
+    "Avaliacoes" : "439",
+    "Dificuldade" : "Media",
+    "Duracao" : "2:00",
+    "Deficientes" : false,
+    "Pais" : "Portugal",
     "Cidade" : "Lisboa"
 }
 { 

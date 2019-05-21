@@ -1,9 +1,7 @@
 package com.example.ihr.api.ui.activities
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button
 import android.widget.ImageButton
@@ -12,26 +10,19 @@ import android.widget.TextView
 import com.example.ihr.R
 import com.example.ihr.api.model.ServerConnector
 import com.example.ihr.api.model.route.RouteObject
-import com.example.ihr.api.model.routeprogress.PointChecker
 import com.example.ihr.api.model.routeprogress.RouteProgressObject
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_route_rating.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.google.gson.Gson
-import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-
-
 
 
 class RouteRating : AppCompatActivity() {
 
     private var userClient = ServerConnector.userClient
-    private var routesClient = ServerConnector.routesClient
 
     private lateinit var nameRoute: TextView
     private lateinit var close: Button
@@ -50,8 +41,8 @@ class RouteRating : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_route_rating)
 
+        val routeSelected = intent.extras.getParcelable<RouteObject>("route")
         routeDone = intent.extras.getParcelable("rota")
-        val image = intent.extras.getString("imagem")
 
         close = findViewById(R.id.close)
         nameRoute = findViewById(R.id.nameRoute)
@@ -79,25 +70,25 @@ class RouteRating : AppCompatActivity() {
         close.setOnClickListener {
             routeDone.setRating(ratingBar)
 
-            val map = JsonObject()
-            val parser = JsonParser().parse(routeDone.toJSON().toString()).asJsonObject
-            map.addProperty("json",parser.toString())
-            map.addProperty("email","manuelpalavras19@gmail.com")
+            val json = JsonObject()
+            val parserUser = JsonParser().parse(routeDone.toJSON().toString()).asJsonObject
+            json.addProperty("json", parserUser.toString())
+            json.addProperty("email", "manuelpalavras19@gmail.com")
+            json.addProperty("name", routeSelected.getName())
+            json.addProperty("oldRating", routeSelected.getClassification())
+            json.addProperty("newRating", ratingBar)
+            json.addProperty("numberOfRatings", routeSelected.getEvaluation())
 
-
-            System.out.println(Gson().toJson(map) + "\n\n\n\n")
-            System.out.println(map.toString() + "\n\n\n\n")
-
-            val postHistory: Call<Boolean> = userClient.postHistory(map)
+            val postHistory: Call<Boolean> = userClient.postHistory(json)
 
             postHistory.enqueue(object : Callback<Boolean> {
                 override fun onFailure(call: Call<Boolean>, t: Throwable) {
                     System.out.printf(t.message)
                 }
-
                 override fun onResponse(call: Call<Boolean>, response: Response<Boolean>) {
                     System.out.printf(response.message())
                 }
+
             })
             finish()
             val intent = Intent(this, MainActivity::class.java)
@@ -106,7 +97,7 @@ class RouteRating : AppCompatActivity() {
         }
 
         nameRoute.text = routeDone.getName()
-        Picasso.get().load(ServerConnector.address + "/image/Imagens/" + image).into(routeImage)
+        Picasso.get().load(ServerConnector.address + "/image/Imagens/" + routeSelected.getImage()).into(routeImage)
         statsRoute.text = "Estatisticas: \n\n Distância:" + routeDone.getDistance().toInt()
 
 

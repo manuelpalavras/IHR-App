@@ -104,7 +104,7 @@ class RouteProgressObject() : Parcelable {
             jsonArray.add(jsonPoI)
         }
 
-        json.put("Pontos de Interesse", jsonArray)
+        json.put("PontosDeInteresse", jsonArray)
 
 
         return json

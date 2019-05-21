@@ -45,10 +45,23 @@ router.get('/classification/:Rota', (req, res) => {
 });
 
 router.get('/route/image/:name', (req, res) => {
-	
 
-	res.send(JSON.stringify("/image/Imagens/" + req.params.name))
 
+    res.send(JSON.stringify("/image/Imagens/" + req.params.name))
+
+});
+
+router.post('/updateRating', (req, res) => {
+
+    console.log(req.body)
+    dataBaseRoute.setNewRouteRating(req.body.name, req.body.oldRating, req.body.newRating, req.body.numberOfRatings, (err, result) => {
+        if (err || res == null) {
+            console.log(err)
+        }
+        else {
+            console.log("Route Rating updated")
+        }
+    })
 });
 
 

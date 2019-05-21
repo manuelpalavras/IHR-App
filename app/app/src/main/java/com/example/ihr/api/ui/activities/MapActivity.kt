@@ -63,7 +63,6 @@ class MapActivity : AppCompatActivity(),
 
     private lateinit var rota: RouteObject
     private var startNavigation = false
-    private var counterPoI = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,8 +76,6 @@ class MapActivity : AppCompatActivity(),
         btnNavigate.setOnClickListener {
             startNavigation()
         }
-
-
 
         getRoutes(rota)
     }
@@ -105,6 +102,7 @@ class MapActivity : AppCompatActivity(),
         }
 
         mapbox.onStart()
+        getRoutes(rota)
     }
 
     override fun onResume() {
@@ -247,9 +245,9 @@ class MapActivity : AppCompatActivity(),
             )
             map.setOnMarkerClickListener(this)
         }
-
-        checkLocation()
         getRoutes(rota)
+        checkLocation()
+
 
 
     }
@@ -270,7 +268,7 @@ class MapActivity : AppCompatActivity(),
                 LatLng(
                     location.latitude,
                     location.longitude
-                ), map.cameraPosition.zoom + 50
+                ), map.cameraPosition.zoom + 100
             )
         )
     }
@@ -297,9 +295,13 @@ class MapActivity : AppCompatActivity(),
     private fun getRoutes(rota: RouteObject) {
 
         val originPoint = try {
-            Point.fromLngLat(originLocation!!.longitude, originLocation!!.latitude)
+            Point.fromLngLat(
+                -9.1527106,
+                38.7070497)
+            //Point.fromLngLat(originLocation!!.longitude, originLocation!!.latitude)
 
         } catch (e: Exception) {
+
             Point.fromLngLat(
                 rota.getPoi()[0].getCoordenates().getCoordinates()[1].toString().toDouble(),
                 rota.getPoi()[0].getCoordenates().getCoordinates()[0].toString().toDouble()
