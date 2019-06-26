@@ -16,7 +16,6 @@ interface RoutesClient {
     @GET("/route/{routeId}")
     fun getRouteById(@Path("routeId") routeID: String): Call<RouteObject>
 
-
     @GET("/routes/PoI/{namePoI}")
     fun getRoutesFromPoI(@Path("namePoI") namePoI: String): Call<List<RouteObject>>
 

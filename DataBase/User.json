@@ -14,6 +14,7 @@
         ]
     },
     "Guia" : true,
+	"HistoricoRotas" : [],
     "Disponibilidade" : [ 
         {
             "Data" : "10-03-2019",
@@ -39,13 +40,15 @@
         "Rotas" : [ 
             "5beed8f539fc861a883b74a2"
         ],
+		"HistoricoRotas" : [],
         "Guias" : [ 
             1, 
             2
         ]
     },
     "Guia" : false
-}{
+}
+{
     "_id" : ObjectId("5c7d5436f34a80e3573b1a83"),
     "Nome" : "Bruno Flores",
     "Email" : "brunorosa@gmail.com",
@@ -56,6 +59,7 @@
             "5beed8f539fc861a883b74a2"
         ]
     },
+	"HistoricoRotas" : [],
     "Guia" : true,
     "Disponibilidade" : [ 
         {
@@ -71,7 +75,8 @@
             "Estado" : "Confirmado"
         }
     ]
-}{
+}
+{
     "_id" : ObjectId("5c7d5523f34a80e3573b1ac3"),
     "Nome" : "Andre Oliveira",
     "Email" : "andreoliveira@gmail.com",
@@ -82,5 +87,6 @@
             "5beed8f539fc861a883b74a2"
         ]
     },
+	"HistoricoRotas" : [],
     "Guia" : false
 }
